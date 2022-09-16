@@ -1,7 +1,7 @@
 import createServer from "@tomphttp/bare-server-node";
 import http from "http";
 import serveStatic from "serve-static";
-import { publicPath } from "ultraviolet-static";
+import { publicPath } from "abyss-static";
 
 const bare = createServer("/bare/");
 const serve = serveStatic(publicPath, { fallthrough: false });

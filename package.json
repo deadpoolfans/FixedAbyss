@@ -13,8 +13,8 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@tomphttp/bare-server-node": "^1.0.2-beta-readme2",
-    "serve-static": "^1.15.0",
-    "ultraviolet-static": "file:../Ultraviolet-Static/ultraviolet-static-1.0.1.tgz"
+    "abyss-static": "file:../abyss-static/abyss-static-1.0.1.tgz",
+    "serve-static": "^1.15.0"
   },
   "devDependencies": {
     "eslint": "^8.23.0",
