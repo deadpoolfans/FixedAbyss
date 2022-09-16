@@ -1,0 +1,1 @@
+cd ../abyss-static && npm run build && npm pack && cd ../abyss && npm install "../abyss-static/abyss-static-1.0.1.tgz" && npm start
