@@ -37,7 +37,7 @@ function createTabAndIframe(){
     tabdiv.appendChild(tabdivp)
 
     tabdivimg = document.createElement("img")
-    tabdivimg.src = "closetab.svg"
+    tabdivimg.src = "closetab.png"
     tabdiv.appendChild(tabdivimg);
 
     iframe = document.createElement("iframe");
