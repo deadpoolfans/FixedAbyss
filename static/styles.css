@@ -1,0 +1,250 @@
+body{
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Segoe UI Variable';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Segoe UI Variable'), url('https://fonts.cdnfonts.com/s/63254/SegoeUIVF.woff') format('woff');
+}
+@font-face {
+    font-family: 'aloja_lighregular';
+    src: url('aloja-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: Segoe UI Variable, Segoe UI;
+}
+
+.topbar{
+    width: 100%;
+    background: #2a2a2a;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.tabsandmore{
+    display: flex;
+    align-items: center;
+}
+
+#error-text{
+    display: none;
+}
+
+.newtabandsettings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background: #1f1f1f;
+    width: fit-content;
+    margin: 0px 5px;
+    box-sizing: border-box;
+    padding: 2.5px 0px;
+    height: 35px;
+}
+
+.newtabandsettings img{
+    padding: 2.5px;
+    box-sizing: border-box;
+    width: 30px;
+    margin: 0px 2.5px;
+    background: #2c2c2c;
+    border-radius: 1rem;
+}
+
+.tabsection{
+    display: flex;
+    align-items: center;
+}
+
+#moremenu{
+    display: none;
+    position: absolute;
+    top: 47.5px;
+    left: 22.5px;
+    width: 100px;
+    height: fit-content;
+    background-color: #343434;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    padding-bottom: 7.5px;
+    z-index: 1000000000;
+}
+
+#moremenu p{
+    font-size: 13px;
+    margin: 7.5px 0px;
+}
+
+#moremenu img{
+    width: 30px;
+}
+
+#lightanddarkmodebuttons{
+    display: flex;
+    justify-content: center;
+}
+
+#lightanddarkmodebuttons div{
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin: 0px 5px;
+}
+
+#lightmodebutton{
+    background: #d9d9d9;
+}
+
+#darkmodebutton{
+    background: #202020;
+}
+
+.exitfullscreenbutton{
+    display: none;
+}
+
+.tab{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #343434;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 0px 10px;
+    border-radius: 1rem;
+    color: white;
+    margin-right: 10px;
+}
+
+.tab img{
+    width: 10px;
+    margin-left: 25px;
+    filter: invert(1)
+}
+
+.tab p{
+    margin: 0px;
+}
+
+.tab.active{
+    background: #444444;
+}
+
+#urlbartop{
+    width: calc(100% - 10px);
+    height: 35px;
+    box-sizing: border-box;
+    padding: 5px 0px;
+    margin: 0px 5px;
+}
+
+#urlbartop input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #343434;
+    border-radius: 1rem;
+    text-align: center;
+    color: white;
+}
+
+#error-text{
+    color: white;
+}
+
+#homepage{
+    overflow: hidden;
+    text-align: center;
+    background-color: #000410;
+    width: 100%;
+    height: calc(100% - 80px);
+    border: none;
+    border-radius: 0rem 0rem 1rem 1rem;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .2s ease;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+@keyframes slide{
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-1692px, 0, 0);
+    }
+}
+
+#homepage h5{
+    margin: 0;
+}
+
+#homepage ul {
+    margin: 0;
+    margin-top: 5px;
+}
+
+#homepage *{
+    z-index: 5;
+}
+
+#homepageimage {
+    background: url("stars.jpg") repeat-x;
+    width: 15076px;
+    animation: slide 55s linear infinite;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+#urlbarhomepage{
+    width: 300px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 5px 0px;
+    margin: 0px 5px;
+}
+
+#urlbarhomepage input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #343434;
+    border-radius: 1rem;
+    text-align: center;
+    color: white;
+}
+
+.iframe{
+    background: #2a2a2a;
+    width: calc(100% - 20px);
+    height: calc(100% - 100px);
+    border: none;
+    border-radius: 0rem 0rem 1rem 1rem;
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    display: none;
+    z-index: 10;
+}

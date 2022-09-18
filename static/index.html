@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" href="oldstyles.css">
+        <link rel="stylesheet" href="styles.css">
+
+        <title>Abyss</title>
+    </head>
+
+    <body>
+
+        <div class="topbar">
+
+            <div class="tabsandmore">
+
+                <div class="newtabandsettings">
+                    <img id="newtabbutton" onclick="createTabAndIframe()" style="filter: invert(1);background: #d3d3d3;" src="newtab.png">
+                    <img id="morebutton" src="more.png">
+                </div>
+
+                <div class="tabsection">
+
+                    <div class="tab active" id="tab1" onclick="openTab(event, 'tab1iframe')">
+                        <p>Tab</p>
+                        <img src="closetab.svg">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <form id="urlbartop">
+                <input placeholder="Search or type a URL..." type="text">
+            </form>
+
+        </div>
+
+        <div id="homepage">
+            <div id="homepageimage"></div>
+            <header style="font-family: aloja_lighregular, Segoe UI Variable, Segoe UI;font-size: 50px;">Abyss</header>
+            <h3>Far Out.</h3>
+            <form id="urlbarhomepage">
+                <input placeholder="Search or type a URL..." type="text">
+            </form>
+            <h5>Our special features include:</h5>
+            <ul>
+                <li>Great design</li>
+                <li>Self-Hosting</li>
+                <li>Lots of servers</li>
+            </ul>
+        </div>
+
+        <iframe class="iframe active" id="tab1iframe"></iframe>
+
+        <div id="moremenu">
+
+            <p>Color Theme</p>
+            <div id="lightanddarkmodebuttons">
+
+                <div id="lightmodebutton"></div>                
+                <div id="darkmodebutton"></div>
+
+            </div>
+
+            <p class="fullscreenbutton">Fullscreen</p>
+            <img onclick="openFullscreen();" class="fullscreenbutton fullscreenbuttonimg" src="fullscreen.png">
+
+            <p class="exitfullscreenbutton">Exit Fullscreen</p>
+            <img onclick="closeFullscreen();" class="exitfullscreenbutton exitfullscreenbuttonimg" src="exitfullscreen.png">
+
+            <p>Vertical Tabs</p>
+            <img src="verticaltabs.png">
+
+            <p>Settings</p>
+            <img src="settings.png">
+        </div>
+
+        <script src="uv/uv.bundle.js"></script>
+        <script src="uv/uv.config.js"></script>
+        <script src="index.js"></script>
+        <script src="contextmenu.js"></script>
+        <script src="tabs.js"></script>
+
+    </body>
+
+</html>
