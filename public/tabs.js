@@ -14,7 +14,8 @@ function openTab(evt, tabNumber) {
     iframe.classList.add("active");
     iframe.style.zIndex = zIndex
     zIndex = zIndex + 2
-    document.querySelector("#urlbartop input").value = __uv$config.decodeUrl(iframe.src).replace(/.*-/g,"")
+    var url = __uv$config.decodeUrl(iframe.src)
+    document.querySelector("#urlbartop input").value = url.substring(url.indexOf("https://") + 0);
     tab = document.getElementsByClassName("tab");
     for (i = 0; i < tab.length; i++) {
       tab[i].className = tab[i].className.replace(" active", "");
