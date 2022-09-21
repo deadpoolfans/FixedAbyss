@@ -13,6 +13,8 @@ morebutton.addEventListener("click", ()=>{
 		moremenu.style.display = "none"
 	}
 	else{
+		moremenu.style.left = "22.5px"
+		moremenu.style.top = "47.5px"
 		moremenu.style.display = "block"
 	}
 })

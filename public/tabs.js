@@ -22,6 +22,8 @@ function openTab(evt, tabNumber) {
     }
     if (iframe.src !== ""){
       iframe.style.display = "block"
+    }else{
+      document.querySelector("#urlbarhomepage input").value = ""
     }
     document.getElementById(tabNumber.replace("iframe","")).className += " active";
 }
