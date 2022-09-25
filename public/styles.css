@@ -3,7 +3,6 @@ html{
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all .2s ease;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -235,7 +234,6 @@ html{
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all .2s ease;
     margin: 0;
     padding: 0;
     color: white;

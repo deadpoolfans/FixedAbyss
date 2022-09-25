@@ -9,6 +9,10 @@ function verticalTabs(){
     horizontaltabsbutton.forEach(elmnt => elmnt.style.display = "block");
     horizontaltabsbuttonimg.style.display = "inline-flex"
 
+    moremenu.style.left = "27.5px"
+    moremenu.style.top = "97.5px"
+    moremenu.style.display = "block"
+
     let body = document.querySelector("body")
     let tabsandmore = document.getElementsByClassName("tabsandmore")[0]
     let topbar = document.getElementsByClassName("topbar")[0]
@@ -70,6 +74,10 @@ function horizontalTabs(){
     horizontaltabsbutton.forEach(elmnt => elmnt.style.display = "none");
     verticaltabsbutton.forEach(elmnt => elmnt.style.display = "block");
     verticaltabsbuttonimg.style.display = "inline-flex"
+
+    moremenu.style.left = "22.5px"
+    moremenu.style.top = "52.5px"
+    moremenu.style.display = "block"
 
     let body = document.querySelector("body")
     let tabsandmore = document.getElementsByClassName("tabsandmore")[0]
