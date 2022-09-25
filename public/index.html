@@ -24,11 +24,6 @@
 
                 <div class="tabsection">
 
-                    <div class="tab active" id="tab1" onclick="openTab(event, 'tab1iframe')">
-                        <p>Tab</p>
-                        <img src="closetab.png">
-                    </div>
-
                 </div>
 
             </div>
@@ -41,20 +36,14 @@
 
         <div id="homepage">
             <div id="homepageimage"></div>
-            <header style="font-family: aloja_lighregular, Segoe UI Variable, Segoe UI;font-size: 50px;">Abyss</header>
+            <header style="font-family: Aloja, Segoe UI Variable, Segoe UI;font-size: 50px;">Abyss</header>
             <h3>Far Out.</h3>
             <form id="urlbarhomepage">
                 <input placeholder="Search or type a URL..." type="text">
             </form>
-            <h5>Our special features include:</h5>
-            <ul>
-                <li>Great design</li>
-                <li>Self-Hosting</li>
-                <li>Lots of servers</li>
-            </ul>
         </div>
 
-        <iframe class="iframe active" id="tab1iframe"></iframe>
+        <iframe class="iframe active"></iframe>
 
         <div id="moremenu">
 
@@ -72,8 +61,11 @@
             <p class="exitfullscreenbutton">Exit Fullscreen</p>
             <img onclick="closeFullscreen();" class="exitfullscreenbutton exitfullscreenbuttonimg" src="exitfullscreen.png">
 
-            <p>Vertical Tabs</p>
-            <img src="verticaltabs.png">
+            <p class="verticaltabsbutton">Vertical Tabs</p>
+            <img onclick="verticalTabs();" class="verticaltabsbutton verticaltabsbuttonimg" src="verticaltabs.png">
+
+            <p class="horizontaltabsbutton">Turn off Vertical Tabs</p>
+            <img onclick="horizontalTabs();" class="horizontaltabsbutton horizontaltabsbuttonimg" src="horizontaltabs.png">
 
             <p>Settings</p>
             <img src="settings.png">
@@ -82,8 +74,9 @@
         <script src="uv/uv.bundle.js"></script>
         <script src="uv/uv.config.js"></script>
         <script src="index.js"></script>
-        <script src="contextmenu.js"></script>
         <script src="tabs.js"></script>
+        <script src="taborientation.js"></script>
+        <script src="contextmenu.js"></script>
 
     </body>
 

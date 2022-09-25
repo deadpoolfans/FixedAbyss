@@ -1,25 +1,23 @@
-var nextNumber = 2
+var nextNumber = 1
 var zIndex = 10
 let tabsection = document.getElementsByClassName("tabsection")[0]
 let body = document.querySelector("body")
 
+createTabAndIframe();
+
 function openTab(evt, tabNumber) {
     document.querySelector(".iframe.active").style.display = "none"
     document.querySelector(".iframe.active").classList.remove("active")
-    var i, iframe, tab;
-    iframe = document.getElementById(tabNumber);
-    for (i = 0; i < iframe.length; i++) {
-      iframe[i].style.display = "none";
-    }
+    var iframes = document.querySelectorAll(".iframe")
+    iframes.forEach(elmnt => elmnt.style.display = "none")
+    var iframe = document.getElementById(tabNumber);
     iframe.classList.add("active");
     iframe.style.zIndex = zIndex
     zIndex = zIndex + 2
     var url = __uv$config.decodeUrl(iframe.src)
     document.querySelector("#urlbartop input").value = url.substring(url.indexOf("https://") + 0);
-    tab = document.getElementsByClassName("tab");
-    for (i = 0; i < tab.length; i++) {
-      tab[i].className = tab[i].className.replace(" active", "");
-    }
+    var tabs = document.querySelectorAll(".tab");
+    tabs.forEach(elmnt => elmnt.className = "tab");
     if (iframe.src !== ""){
       iframe.style.display = "block"
     }else{

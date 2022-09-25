@@ -24,11 +24,15 @@ function go(value){
         url = "https://" + url;
       iframe.style.display = "block"
       iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url);
+      var iframeurl = __uv$config.decodeUrl(iframe.src)
+      document.querySelector("#urlbartop input").value = iframeurl.substring(iframeurl.indexOf("https://") + 0);
     });
 }
 
 urlbarhomepage.onkeydown = function (event){
-  if (event.key === 'Enter') go(urlbarhomepage.value);
+  if (event.key === 'Enter'){
+    go(urlbarhomepage.value);
+  } 
 }
 
 urlbartop.onkeydown = function (event){

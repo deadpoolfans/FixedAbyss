@@ -10,6 +10,7 @@ html{
   }
   
   body{
+    display: table;
     background-color: rgb(0,0,0);
     height: 100%;
     width: 100%;
@@ -67,7 +68,7 @@ html{
     src: local('Segoe UI Variable'), url('https://fonts.cdnfonts.com/s/63254/SegoeUIVF.woff') format('woff');
 }
 @font-face {
-    font-family: 'aloja_lighregular';
+    font-family: 'Aloja';
     src: url('aloja-light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -82,23 +83,21 @@ html{
     background: #2a2a2a;
     box-sizing: border-box;
     padding: 5px;
-    border-radius: 1rem 1rem 0rem 0rem;
+    border-radius: 15px 15px 0rem 0rem;
 }
 
 .tabsandmore{
+    background: #2a2a2a;
     display: flex;
     align-items: center;
-}
-
-#error-text{
-    display: none;
+    box-sizing: border-box;
 }
 
 .newtabandsettings{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 1rem;
+    border-radius: 15px;
     background: #1f1f1f;
     width: fit-content;
     margin: 0px 5px;
@@ -113,10 +112,11 @@ html{
     width: 30px;
     margin: 0px 2.5px;
     background: #2c2c2c;
-    border-radius: 1rem;
+    border-radius: 15px;
 }
 
 .tabsection{
+    height: 45px;
     display: flex;
     align-items: center;
 }
@@ -127,7 +127,7 @@ html{
     width: 100px;
     height: fit-content;
     background-color: #343434;
-    border-radius: 1rem;
+    border-radius: 15px;
     box-sizing: border-box;
     text-align: center;
     color: white;
@@ -168,17 +168,23 @@ html{
     display: none;
 }
 
+.horizontaltabsbutton{
+    display: none;
+}
+
 .tab{
+    cursor: default;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #343434;
     height: 35px;
+    min-height: 35px;
     box-sizing: border-box;
     padding: 0px 10px;
-    border-radius: 1rem;
+    border-radius: 15px;
     color: white;
-    margin-right: 10px;
+    margin: 5px;
 }
 
 .tab img{
@@ -209,7 +215,7 @@ html{
     border: none;
     outline: none;
     background: #343434;
-    border-radius: 1rem;
+    border-radius: 15px;
     text-align: center;
     color: white;
 }
@@ -223,9 +229,9 @@ html{
     text-align: center;
     background-color: #000410;
     width: 100%;
-    height: calc(100% - 80px);
+    height: calc(100% - 90px);
     border: none;
-    border-radius: 0rem 0rem 1rem 1rem;
+    border-radius: 0rem 0rem 15px 15px;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -247,10 +253,6 @@ html{
     100% {
         transform: translate3d(-1692px, 0, 0);
     }
-}
-
-#homepage h5{
-    margin: 0;
 }
 
 #homepage ul {
@@ -285,7 +287,7 @@ html{
     border: none;
     outline: none;
     background: #343434;
-    border-radius: 1rem;
+    border-radius: 15px;
     text-align: center;
     color: white;
 }
@@ -293,11 +295,11 @@ html{
 .iframe{
     background: #2a2a2a;
     width: calc(100% - 20px);
-    height: calc(100% - 100px);
+    height: calc(100% - 120px);
     border: none;
-    border-radius: 0rem 0rem 1rem 1rem;
+    border-radius: 0rem 0rem 15px 15px;
     position: absolute;
-    top: 90px;
+    top: 100px;
     left: 10px;
     display: none;
     z-index: 10;
