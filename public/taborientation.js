@@ -4,14 +4,26 @@ let horizontaltabsbutton = document.querySelectorAll(".horizontaltabsbutton")
 let verticaltabsbuttonimg = document.querySelector(".verticaltabsbuttonimg")
 let horizontaltabsbuttonimg = document.querySelector(".horizontaltabsbuttonimg")
 
+let tabOrientation = getCookie("tabOrientation")
+if(tabOrientation == "vertical"){
+    verticalTabs()
+}
+else if(tabOrientation == "horizontal"){
+    horizontalTabs()
+}
+else{
+    horizontalTabs()
+}
+
 function verticalTabs(){
+    setCookie("tabOrientation", "vertical", "365");
+
     verticaltabsbutton.forEach(elmnt => elmnt.style.display = "none");
     horizontaltabsbutton.forEach(elmnt => elmnt.style.display = "block");
     horizontaltabsbuttonimg.style.display = "inline-flex"
 
     moremenu.style.left = "27.5px"
     moremenu.style.top = "97.5px"
-    moremenu.style.display = "block"
 
     let body = document.querySelector("body")
     let tabsandmore = document.getElementsByClassName("tabsandmore")[0]
@@ -71,13 +83,14 @@ function verticalTabs(){
 }
 
 function horizontalTabs(){
+    setCookie("tabOrientation", "horizontal", "365");
+
     horizontaltabsbutton.forEach(elmnt => elmnt.style.display = "none");
     verticaltabsbutton.forEach(elmnt => elmnt.style.display = "block");
     verticaltabsbuttonimg.style.display = "inline-flex"
 
     moremenu.style.left = "22.5px"
     moremenu.style.top = "52.5px"
-    moremenu.style.display = "block"
 
     let body = document.querySelector("body")
     let tabsandmore = document.getElementsByClassName("tabsandmore")[0]
