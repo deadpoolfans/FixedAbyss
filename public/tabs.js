@@ -37,8 +37,9 @@ function createTabAndIframe(){
     tabdivp.innerHTML = "Tab"
     tabdiv.appendChild(tabdivp)
 
-    tabdivimg = document.createElement("img")
+    tabdivimg = document.createElement("img");
     tabdivimg.src = "closetab.png"
+    tabdivimg.classList.add("invert");
     tabdiv.appendChild(tabdivimg);
 
     iframe = document.createElement("iframe");
