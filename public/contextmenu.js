@@ -30,11 +30,6 @@ window.addEventListener('mouseup', function(e) {
     if (!event.target.closest("#moremenu") && !event.target.closest("#morebutton")){
         moremenu.style.display = "none";
     }
-	//document.querySelectorAll(".iframe").forEach(elmnt => {
-	//	if(event.target.closest(elmnt)){
-	//		moremenu.style.display = "none";
-	//	}
-	//})
 });
 
 var screen = document.documentElement;
