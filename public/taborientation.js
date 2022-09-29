@@ -71,7 +71,6 @@ function verticalTabs(){
         mutations.forEach(function(mutation){
             if(tabdirection == "vertical"){
                 for(var i = 0;i < mutation.addedNodes.length;i++){
-                        console.log("Found!");
                         fixVerticalElements();
                 }
             }
@@ -138,7 +137,6 @@ function horizontalTabs(){
         mutations.forEach(function(mutation){
             if(tabdirection == "horizontal"){
                 for(var i = 0;i < mutation.addedNodes.length;i++){
-                        console.log("Found!");
                         fixHorizontalElements();
                 }
             }
