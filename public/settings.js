@@ -1,3 +1,6 @@
+let newpageicon = document.getElementById("newpageicon")
+let newpagetitle = document.getElementById("newpagetitle")
+
 let pageIcon = getCookie("pageIcon")
 if(pageIcon !== ""){
     changePageIcon(pageIcon)
@@ -18,11 +21,13 @@ function changePageIcon(iconurl){
     var pageicon = document.querySelector("link[rel~='icon']");
     setCookie("pageIcon", iconurl, "365");
     pageicon.href = iconurl
+    newpageicon.value = iconurl
 }
 
 function changePageTitle(newtitle){
     setCookie("pageTitle", newtitle, "365");
     document.title = newtitle
+    newpagetitle.value = newtitle
 }
 
 let settingsbackground = document.getElementById("settingsbackground")
@@ -39,9 +44,6 @@ window.addEventListener('mouseup', function(e) {
         settingsbackground.style.display = "none";
     }
 });
-
-let newpageicon = document.getElementById("newpageicon")
-let newpagetitle = document.getElementById("newpagetitle")
 
 newpageicon.onkeydown = function (event){
      if (event.key === 'Enter'){
