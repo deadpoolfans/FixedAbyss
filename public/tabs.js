@@ -6,8 +6,18 @@ let body = document.querySelector("body")
 createTabAndIframe();
 
 function openTab(evt, tabNumber) {
+  document.querySelector("#" + tabNumber.replace("iframe","") + " img").addEventListener("click", ()=>{
+    document.querySelector("#" + tabNumber).outerHTML = ""
+    document.querySelector("#" + tabNumber.replace("iframe","")).outerHTML = ""
+    return;
+  })
+
+  if (typeof(document.querySelector(".iframe.active")) != 'undefined' && document.querySelector(".iframe.active") != null)
+  {
     document.querySelector(".iframe.active").style.display = "none"
     document.querySelector(".iframe.active").classList.remove("active")
+  }
+
     var iframes = document.querySelectorAll(".iframe")
     iframes.forEach(elmnt => elmnt.style.display = "none")
     var iframe = document.getElementById(tabNumber);
