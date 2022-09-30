@@ -75,10 +75,6 @@ body{
     height: 14px;
 }
 
-*{
-    font-family: Segoe UI Variable, Segoe UI;
-}
-
 .invert{
     filter: invert(var(--invert));
 }
