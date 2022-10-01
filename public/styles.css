@@ -337,8 +337,28 @@ body{
     width: 100px;
 }
 
-#settingssidebar .tab p{
+.settingstab{
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--element-background);
+    height: 35px;
+    min-height: 35px;
+    box-sizing: border-box;
+    padding: 0px 10px;
+    border-radius: 15px;
+    color: var(--font-color);
+    margin: 5px;
+}
+
+.settingstab p{
+    margin: 0px;
     font-size: 12px;
+}
+
+.settingstab.active{
+    background: var(--tab-active-background);
 }
 
 .settingssection h1{
@@ -348,7 +368,7 @@ body{
 .settingssection{
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;

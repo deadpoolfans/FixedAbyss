@@ -71,23 +71,22 @@
             <div id="settings">
 
                 <div id="settingssidebar">
-                    <div class="tab">
+                    <div class="settingstab active" onclick="openSettingsTab(event, 'tabcloaking')">
                         <p>Tab Cloaking</p>
                     </div>
-                    <div class="tab">
+                    <div class="settingstab" onclick="openSettingsTab(event, 'backgroundselection')">
                         <p>Background</p>
                     </div>
-                    <div class="tab">
+                    <div class="settingstab">
                         <p>Accessibility</p>
                     </div>
-                    <div class="tab">
+                    <div class="settingstab">
                         <p>Advanced</p>
                     </div>
                 </div>
 
-                <div class="settingssection" style="display: none;">
-                    <h1>Settings</h1>
-                    <h3>Tab Cloaking</h3>
+                <div style="display: flex;" class="settingssection" id="tabcloaking">
+                    <h1>Tab Cloaking</h1>
                     <p>Page Title</p>
                     <input id="newpagetitle" type="text" placeholder="Put your new page title here...">
                     <p>Page Icon</p>
@@ -95,8 +94,8 @@
                 </div>
                 
                 <div class="settingssection" id="backgroundselection">
-                    <h1>Settings</h1>
-                    <h3>Select Background Image</h3>
+                    <h1>Select Background Image</h1>
+                    <br>
                     <img id="bg1" class="bg_selections" src="fragments.gif">
                 </div>
             </div>

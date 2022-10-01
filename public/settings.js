@@ -56,3 +56,16 @@ newpagetitle.onkeydown = function (event){
        changePageTitle(newpagetitle.value);
    } 
 }
+
+function openSettingsTab(evt, tabNumber) {
+    settingssection = document.querySelectorAll(".settingssection");
+    settingssection.forEach(element => {
+        element.style.display = "none";
+    });
+    settingstabs = document.querySelectorAll(".settingstab");
+    settingstabs.forEach(elmnt => {
+        elmnt.className = "settingstab";
+    })
+    document.getElementById(tabNumber).style.display = "flex";
+    evt.currentTarget.className += " active";
+  }
