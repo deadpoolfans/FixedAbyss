@@ -35,7 +35,7 @@ function verticalTabs(){
     tabsandmore.style.width = "100px"
     tabsandmore.style.height = "calc(100% - 55px)"
     tabsandmore.style.flexDirection = "column"
-    tabsandmore.style.borderRadius = "0rem 0rem 0rem 15px"
+    tabsandmore.style.borderRadius = "0rem 0rem 0rem 10px"
     tabsandmore.style.padding = "20px 0px"
     tabsandmore.style.zIndex = "100"
 
@@ -50,7 +50,7 @@ function verticalTabs(){
     homepage.style.marginLeft = "100px"
     homepage.style.height = "calc(100% - 45px)"
     homepage.style.width = "calc(100% - 100px)"
-    homepage.style.borderRadius = "0rem 0rem 15px 0rem"
+    homepage.style.borderRadius = "0rem 0rem 10px 0rem"
 
     function fixVerticalElements(){
         tabdirection = "vertical"
@@ -61,7 +61,7 @@ function verticalTabs(){
             elmnt.style.width = "calc(100% - 120px)"
             elmnt.style.left = "110px"
             elmnt.style.top = "55px"
-            elmnt.style.borderRadius = "0rem 0rem 15px 0rem"
+            elmnt.style.borderRadius = "0rem 0rem 10px 0rem"
         })
     }
 
