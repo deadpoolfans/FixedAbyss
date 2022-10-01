@@ -366,3 +366,7 @@ body{
     border-radius: 15px;
     text-align: center;
 }
+
+#backgroundselection img{
+    width: 200px;
+}
