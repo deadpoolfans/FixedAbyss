@@ -288,6 +288,22 @@ body{
     color: var(--font-color);
 }
 
+#homepagelinks{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#homepagelinks p{
+    text-decoration: underline;
+    margin: 0;
+    font-size: 15px;
+}
+
+#homepagelinks p:hover{
+    cursor: pointer;
+}
+
 .iframe{
     background: var(--background-color);
     width: calc(100% - 20px);
