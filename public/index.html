@@ -38,6 +38,7 @@
             <h2>Far Out.</h2>
             <form id="urlbarhomepage">
                 <input placeholder="Search or type a URL..." type="text">
+                <img src="discord.jpg" onclick="go('https://discord.com')">
             </form>
 
             <div id="homepagelinks">
@@ -78,6 +79,9 @@
                     <div class="settingstab active" onclick="openSettingsTab(event, 'tabcloaking')">
                         <p>Tab Cloaking</p>
                     </div>
+                    <div class="settingstab" onclick="openSettingsTab(event, 'themeselection')">
+                        <p>Theme</p>
+                    </div>
                     <div class="settingstab" onclick="openSettingsTab(event, 'backgroundselection')">
                         <p>Background</p>
                     </div>
@@ -96,11 +100,60 @@
                     <p>Page Icon</p>
                     <input id="newpageicon" type="text" placeholder="Put your new page icon here...">
                 </div>
+
+                <div class="settingssection" id="themeselection">
+                    <h1>Select Theme</h1>
+                    <br>
+
+                    <div id="backgroundandthemeoptions">
+
+                        <div class="backgroundandthemeoption">
+                            <img id="spacetheme" src="stars.jpg">
+                            <p>Space</p>
+                        </div>
+
+                        <div class="backgroundandthemeoption">
+                            <img id="oceantheme" src="ocean.jpg">
+                            <p>Ocean</p>
+                        </div>
+
+                        <div class="backgroundandthemeoption">
+                            <img id="windows11theme" src="https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/backgroundlight.jpg">
+                            <p>Windows 11</p>
+                        </div>
+
+                    </div>
+
+                </div>
                 
                 <div class="settingssection" id="backgroundselection">
                     <h1>Select Background Image</h1>
                     <br>
-                    <img id="bg1" class="bg_selections" src="fragments.gif">
+
+                    <div id="backgroundandthemeoptions">
+
+                        <div class="backgroundandthemeoption">
+                            <img id="spacebackground" src="stars.jpg" onclick="changeBackground(this.getAttribute('src'))">
+                            <p>Space</p>
+                        </div>
+
+                        <div class="backgroundandthemeoption">
+                            <img src="ocean.jpg" id="oceanbackground" onclick="changeBackground(this.getAttribute('src'))">
+                            <p>Ocean</p>
+                        </div>
+
+                        <div class="backgroundandthemeoption">
+                            <img id="fragmentsbackground" src="fragments.gif" onclick="changeBackground(this.getAttribute('src'))">
+                            <p>Fragments</p>
+                        </div>
+
+                        <div class="backgroundandthemeoption">
+                            <img id="windows11background" src="https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/backgroundlight.jpg" onclick="changeBackground(this.getAttribute('src'))">
+                            <p>Windows 11</p>
+                        </div>
+
+                    </div>
+                    
                 </div>
             </div>
         </div>
