@@ -74,11 +74,9 @@ newpagetitle.onkeydown = function (event){
    } 
 }
 
-// Themes
 
 
-
-
+// Themes in theme.js
 
 
 
