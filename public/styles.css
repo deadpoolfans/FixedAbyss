@@ -2,6 +2,7 @@
     --element-background: #343434;
     --background-color: #2a2a2a;
     --font-color: white;
+    --border: 1.75px solid #4C4E52;
     --tab-active-background: #444444;
     --invert: 1;
 }
@@ -173,7 +174,7 @@ body{
     display: none;
 }
 
-.tab{
+.tab , .settingstab{
     cursor: default;
     display: flex;
     justify-content: space-between;
@@ -184,20 +185,21 @@ body{
     box-sizing: border-box;
     padding: 0px 10px;
     border-radius: 10px;
+    border: var(--border);
     color: var(--font-color);
     margin: 5px;
 }
 
-.tab img{
+.tab img , .settingstab img{
     width: 10px;
     margin-left: 25px;
 }
 
-.tab p{
+.tab p , .settingstab p{
     margin: 0px;
 }
 
-.tab.active{
+.tab.active , .settingstab.active{
     background: var(--tab-active-background);
 }
 
@@ -218,6 +220,7 @@ body{
     border-radius: 10px;
     text-align: center;
     color: var(--font-color);
+    border: var(--border);
 }
 
 #homepage{
@@ -261,12 +264,13 @@ body{
 }
 
 #homepageimage {
-    background: url("stars.jpg") repeat-x;
-    width: 15076px;
+    background-image: url("stars.jpg") repeat-x;
+    width: 5076px;
     animation: slide 55s linear infinite;
     height: 100%;
     position: absolute;
     z-index: 0;
+    background-size: cover;
 }
 
 #urlbarhomepage{
@@ -276,6 +280,7 @@ body{
     padding: 5px 0px;
     margin: 0px 5px;
     display: flex;
+    align-items: center;
 }
 
 #urlbarhomepage input{
@@ -288,12 +293,16 @@ body{
     border-radius: 10px;
     text-align: center;
     color: var(--font-color);
+    border: var(--border);
 }
 
 #urlbarhomepage img{
     border-radius: 10px;
     margin: 0px 5px;
     cursor: pointer;
+    border: var(--border);
+    width: 40px;
+    height: 40px;
 }
 
 #homepagelinks{
@@ -349,6 +358,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    border: var(--border);
 }
 
 #settings *{
@@ -361,28 +371,8 @@ body{
     width: 100px;
 }
 
-.settingstab{
-    cursor: default;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--element-background);
-    height: 35px;
-    min-height: 35px;
-    box-sizing: border-box;
-    padding: 0px 10px;
-    border-radius: 10px;
-    color: var(--font-color);
-    margin: 5px;
-}
-
 .settingstab p{
-    margin: 0px;
-    font-size: 12px;
-}
-
-.settingstab.active{
-    background: var(--tab-active-background);
+    font-size: 13px;
 }
 
 .settingssection h1{
@@ -409,9 +399,10 @@ body{
     background: var(--element-background);
     border-radius: 10px;
     text-align: center;
+    border: var(--border);
 }
 
-#backgroundandthemeoptions{
+#themeoptions , #backgroundoptions{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -419,18 +410,26 @@ body{
     height: fit-content;
 }
 
-.backgroundandthemeoption{
+.themeoption , .backgroundoption{
     margin: 10px;
 }
 
-.backgroundandthemeoption img{
+.themeoption img , .backgroundoption img, #lighttheme , #darktheme{
     width: 200px;
     border-radius: 10px;
     height: 125px;
 }
 
-.backgroundandthemeoption p{
+.themeoption p , .backgroundoption p{
     font-size: 13px;
     text-align: center;
     margin: 0;
+}
+
+#lighttheme{
+    background: #d9d9d9;
+}
+
+#darktheme{
+    background: #202020;
 }

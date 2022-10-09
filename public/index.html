@@ -105,21 +105,26 @@
                     <h1>Select Theme</h1>
                     <br>
 
-                    <div id="backgroundandthemeoptions">
+                    <div id="themeoptions">
 
-                        <div class="backgroundandthemeoption">
+                        <div class="themeoption">
+                            <div id="darktheme" onclick="darkMode();"></div>
+                            <p>Dark</p>
+                        </div>
+
+                        <div class="themeoption">
+                            <div id="lighttheme" onclick="lightMode();"></div>
+                            <p>Light</p>
+                        </div>
+
+                        <div class="themeoption">
                             <img id="spacetheme" src="stars.jpg">
                             <p>Space</p>
                         </div>
 
-                        <div class="backgroundandthemeoption">
+                        <div class="themeoption">
                             <img id="oceantheme" src="ocean.jpg">
                             <p>Ocean</p>
-                        </div>
-
-                        <div class="backgroundandthemeoption">
-                            <img id="windows11theme" src="https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/backgroundlight.jpg">
-                            <p>Windows 11</p>
                         </div>
 
                     </div>
@@ -130,26 +135,21 @@
                     <h1>Select Background Image</h1>
                     <br>
 
-                    <div id="backgroundandthemeoptions">
+                    <div id="backgroundoptions">
 
-                        <div class="backgroundandthemeoption">
+                        <div class="backgroundoption">
                             <img id="spacebackground" src="stars.jpg" onclick="changeBackground(this.getAttribute('src'))">
                             <p>Space</p>
                         </div>
 
-                        <div class="backgroundandthemeoption">
+                        <div class="backgroundoption">
                             <img src="ocean.jpg" id="oceanbackground" onclick="changeBackground(this.getAttribute('src'))">
                             <p>Ocean</p>
                         </div>
 
-                        <div class="backgroundandthemeoption">
+                        <div class="backgroundoption">
                             <img id="fragmentsbackground" src="fragments.gif" onclick="changeBackground(this.getAttribute('src'))">
                             <p>Fragments</p>
-                        </div>
-
-                        <div class="backgroundandthemeoption">
-                            <img id="windows11background" src="https://raw.githubusercontent.com/notAperson535/Win11-HTML/main/img/backgroundlight.jpg" onclick="changeBackground(this.getAttribute('src'))">
-                            <p>Windows 11</p>
                         </div>
 
                     </div>

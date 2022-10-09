@@ -99,14 +99,15 @@ function changeBackground(backgroundurl){
     setCookie("backgroundImage", backgroundurl, "365")
     console.log(backgroundurl)
     if(backgroundurl == "stars.jpg"){
-        homepageimage.style.width = "15076px"
+        homepageimage.style.width = "5076px"
         homepageimage.style.animation = "slide 55s linear infinite"
+        homepageimage.style.backgroundPosition = "initial"
     }
     else{
         homepageimage.style.width = "100%"
         homepageimage.style.animation = "none"
+        homepageimage.style.backgroundPosition = "50%"
     }
     homepageimage.style.backgroundSize = "cover"
-    homepageimage.style.backgroundPosition = "50%"
-    homepageimage.style.background = "url(" + backgroundurl + ")"
+    homepageimage.style.backgroundImage = "url(" + backgroundurl + ")"
 }
