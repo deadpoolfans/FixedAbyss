@@ -264,7 +264,7 @@ body{
 }
 
 #homepageimage {
-    background-image: url("stars.jpg") repeat-x;
+    background-image: url("stars.jpg");
     width: 5076px;
     animation: slide 55s linear infinite;
     height: 100%;
