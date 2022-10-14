@@ -28,6 +28,9 @@
 
             <form id="urlbartop">
                 <input placeholder="Search or type a URL..." type="text">
+                <div title="Open in new tab">
+                    <svg onclick="window.open(document.querySelector('.iframe.active').src, '_blank');" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill-rule="evenodd" viewBox="0 0 48 48"><path stroke-width="0px" stroke-linecap="round" shape-rendering="geometricPrecision" d="M 38 38 H 10 V 10 h 14 V 6 H 10 c -2.21 0 -4 1.79 -4 4 v 28 c 0 2.21 1.79 4 4 4 h 28 c 2.21 0 4 -1.79 4 -4 V 24 h -4 v 14 Z M 28 6 v 4 h 7.17 L 15.51 29.66 l 2.83 2.83 L 38 12.83 V 20 h 4 V 6 H 28 Z"></path></svg>
+                </div>
             </form>
 
         </div>
@@ -38,15 +41,28 @@
             <h2>Far Out.</h2>
             <form id="urlbarhomepage">
                 <input placeholder="Search or type a URL..." type="text">
-                <img src="discord.jpg" onclick="go('https://discord.com')">
+                <div id="pageimagelinks">
+                    <img src="discord.jpg" title="Discord" onclick="go('https://discord.com')">
+                    <img src="games.png" title="Games" onclick="window.open('./games/', '_blank')"
+                </div>
+               
             </form>
 
             <div id="homepagelinks">
                 <p onclick="go('https://discord.gg/FEBu3jDvrT')">Join the Abyss Discord Server!</p>
             </div>
         </div>
+    </div>
 
         <div id="moremenu">
+
+            <p>Color Theme</p>
+            <div id="lightanddarkmodebuttons">
+
+                <div onclick="lightMode();" id="lightmodebutton"></div>                
+                <div onclick="darkMode();" id="darkmodebutton"></div>
+
+            </div>
 
             <p class="fullscreenbutton">Fullscreen</p>
             <img onclick="openFullscreen();" class="fullscreenbutton fullscreenbuttonimg" src="fullscreen.png">

@@ -31,9 +31,9 @@ function verticalTabs(){
     let urlbartop = document.getElementById("urlbartop")
     body.insertBefore(tabsandmore, topbar)
     tabsandmore.style.position = "absolute"
-    tabsandmore.style.top = "45px"
+    tabsandmore.style.top = "55px"
     tabsandmore.style.width = "100px"
-    tabsandmore.style.height = "calc(100% - 55px)"
+    tabsandmore.style.height = "calc(100% - 65px)"
     tabsandmore.style.flexDirection = "column"
     tabsandmore.style.borderRadius = "0rem 0rem 0rem 10px"
     tabsandmore.style.padding = "20px 0px"
