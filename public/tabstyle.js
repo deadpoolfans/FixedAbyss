@@ -236,7 +236,7 @@ function floatingTabs(){
         if(e.clientX > topbar.getBoundingClientRect().x+ topbar.offsetWidth){
             closeFloatingTabs();
         }
-        if(e.clientY > 165){
+        if(e.clientY > 155){
             closeFloatingTabs();
         }
         // if(e.clientY < topbar.getBoundingClientRect().y){

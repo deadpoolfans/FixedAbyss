@@ -16,8 +16,8 @@
             <div class="tabsandmore">
 
                 <div class="newtabandsettings">
-                    <img id="newtabbutton" class="invert" onclick="createTabAndIframe()" style="background: #d3d3d3;" src="newtab.png">
-                    <img id="morebutton" src="more.png">
+                    <img id="newtabbutton" tooltip="New Tab" class="invert" onclick="createTabAndIframe()" style="background: #d3d3d3;" src="newtab.png">
+                    <img id="morebutton" tooltip="More Menu" src="more.png">
                 </div>
 
                 <div class="tabsection">
@@ -28,7 +28,7 @@
 
             <form id="urlbartop">
                 <input placeholder="Search or type a URL..." type="text">
-                <div title="Open in new tab">
+                <div tooltip="Open in new tab">
                     <svg onclick="window.open(document.querySelector('.iframe.active').src, '_blank');" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill-rule="evenodd" viewBox="0 0 48 48"><path stroke-width="0px" stroke-linecap="round" shape-rendering="geometricPrecision" d="M 38 38 H 10 V 10 h 14 V 6 H 10 c -2.21 0 -4 1.79 -4 4 v 28 c 0 2.21 1.79 4 4 4 h 28 c 2.21 0 4 -1.79 4 -4 V 24 h -4 v 14 Z M 28 6 v 4 h 7.17 L 15.51 29.66 l 2.83 2.83 L 38 12.83 V 20 h 4 V 6 H 28 Z"></path></svg>
                 </div>
             </form>
@@ -42,8 +42,8 @@
             <form id="urlbarhomepage">
                 <input placeholder="Search or type a URL..." type="text">
                 <div id="pageimagelinks">
-                    <img src="discord.jpg" title="Discord" onclick="go('https://discord.com')">
-                    <img src="games.png" title="Games" onclick="window.open('./games/', '_blank')"
+                    <img src="discord.jpg" tooltip="Discord" onclick="go('https://discord.com')">
+                    <img src="games.png" tooltip="Games" onclick="window.open('./games.html', '_blank')"
                 </div>
                
             </form>
@@ -194,6 +194,38 @@
                 }
                 return "";
             }
+        </script>
+        <script name="customtooltip">
+            (function () {
+
+            var a = document.getElementsByTagName('*'),
+                tip, text,
+                base = document.createElement('tooltip'); //Defining all objects
+
+            for (var x=0;x < a.length;x++) { //I'm using "for" loop to get all "a" elements with attribute "tooltip".
+                a[x].onmouseover = function () {
+                    text = this.getAttribute('tooltip');
+                    tip = document.createTextNode(text);
+                    if (text != null) {// Checking if tooltip is empty or not.
+                        base.innerHTML = '';
+                        base.appendChild(tip);
+                        if (document.getElementsByTagName('tooltip')[0]){// Checking for any "tooltip" element
+                            document.getElementsByTagName('tooltip')[0].remove();// Removing old tooltip
+                        }
+                        //base.style.top = a.getBoundingClientRect().y + a.offsetHeight
+                        //base.style.left = a.getBoundingClientRect().x + a.offsetWidth
+                        base.style.top = (event.pageY + 5) + 'px';
+                        base.style.left = (event.pageX + 5) + 'px';
+                        document.body.appendChild(base);
+                    }
+
+                };
+                a[x].onmouseout = function () {
+                    document.getElementsByTagName('tooltip')[0].remove();// Remove last tooltip
+                };
+            }
+
+            })();
         </script>
         <script src="theme.js"></script>
         <script src="tabstyle.js"></script>

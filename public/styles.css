@@ -77,6 +77,17 @@ body{
     height: 14px;
 }
 
+tooltip {
+    position: fixed;
+    background: var(--background-color);
+    color: var(--font-color);
+    border: var(--border);
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    z-index: 10000000000;
+}
+
 .invert{
     filter: invert(var(--invert));
 }
@@ -199,7 +210,7 @@ body{
 
 .tab{
     width: 0px;
-    max-width: 175px;
+    max-width: 125px;
     overflow: hidden;
     margin: 5px 0px;
     margin-left: 10px;
@@ -341,7 +352,6 @@ body{
     cursor: pointer;
     border: var(--border);
     height: 40px;
-    background: white;
 }
 
 #homepagelinks{
@@ -447,6 +457,7 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     height: fit-content;
+    overflow-y: auto;
 }
 
 .themeoption , .backgroundoption{
