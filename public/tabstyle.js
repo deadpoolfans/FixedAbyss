@@ -11,6 +11,9 @@ if(tabStyle == "vertical"){
 else if(tabStyle == "horizontal"){
     horizontalTabs()
 }
+else if(tabStyle == "floating"){
+    floatingTabs()
+}
 else{
     horizontalTabs()
 }
@@ -224,8 +227,8 @@ function floatingTabs(){
         if(e.clientY < 10){
             topbar.style.top = "95px"
         }
-        if(moremenu.style.display == "block" && e.clientX > moremenux && e.clientX < moremenux + 101){
-            void 0;
+        if(moremenu.style.display == "block" && e.clientX > moremenu.getBoundingClientRect().x && e.clientX < moremenu.getBoundingClientRect().x + 101){
+            return;
         }
         if(e.clientX < topbar.getBoundingClientRect().x){
             closeFloatingTabs();
@@ -233,7 +236,7 @@ function floatingTabs(){
         if(e.clientX > topbar.getBoundingClientRect().x+ topbar.offsetWidth){
             closeFloatingTabs();
         }
-        if(e.clientY > 215){
+        if(e.clientY > 165){
             closeFloatingTabs();
         }
         // if(e.clientY < topbar.getBoundingClientRect().y){

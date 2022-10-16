@@ -7,8 +7,6 @@ function rightClick(e){
 let morebutton = document.getElementById("morebutton")
 let moremenu = document.getElementById("moremenu")
 
-var moremenux = 0
-
 function openMenu(){
 	var moremenurect = morebutton.getBoundingClientRect();
 	moremenu.style.top = moremenurect.y + 30 + "px"
