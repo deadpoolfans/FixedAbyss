@@ -14,7 +14,6 @@ function openMenu(){
 	moremenu.style.top = moremenurect.y + 30 + "px"
 	moremenu.style.left = moremenurect.x + 15 - 50 + "px"
 	moremenu.style.display = "block"
-	moremenux = moremenurect.x
 }
 
 function closeMenu(){
