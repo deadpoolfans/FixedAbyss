@@ -43,6 +43,7 @@ body{
 
 *{
     font-family: Segoe UI Variable, Segoe UI;
+    transition: all .2s;
 }
 
 ::-webkit-scrollbar {
@@ -81,18 +82,21 @@ body{
 }
 
 .topbar{
-    width: 100%;
     background: var(--background-color);
     box-sizing: border-box;
     padding: 5px;
     border-radius: 10px 10px 0rem 0rem;
+    backdrop-filter: saturate(3) blur(20px);
+    min-width: fit-content;
+    transition: all .17s cubic-bezier(.79,.14,.15,.86);
 }
 
 .tabsandmore{
-    background: var(--background-color);
     display: flex;
     align-items: center;
     box-sizing: border-box;
+    min-width: 100%;
+    width: fit-content;
 }
 
 .newtabandsettings{
@@ -102,7 +106,7 @@ body{
     border-radius: 10px;
     background: #1F1F1F;
     width: fit-content;
-    margin: 0px 5px;
+    margin-left: 5px;
     box-sizing: border-box;
     padding: 2.5px 0px;
     height: 35px;
@@ -121,6 +125,7 @@ body{
     height: 45px;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 #moremenu{
@@ -135,6 +140,8 @@ body{
     color: var(--font-color);
     padding-bottom: 7.5px;
     z-index: 1000000000;
+    right: -1000000px;
+    bottom: -10000000px;
 }
 
 #moremenu p{
@@ -191,17 +198,20 @@ body{
 }
 
 .tab{
-    width: 100%;
-    max-width: 125px;
-}
-
-.tab img{
+    width: 0px;
+    max-width: 175px;
+    overflow: hidden;
+    margin: 5px 0px;
     margin-left: 10px;
 }
 
 .tab img , .settingstab img{
     width: 10px;
     margin-left: 25px;
+}
+
+.tab img{
+    margin-left: 10px;
 }
 
 .tab p , .settingstab p{
@@ -232,6 +242,10 @@ body{
     text-align: center;
     color: var(--font-color);
     border: var(--border);
+}
+
+#urlbartop div{
+    display: flex;
 }
 
 #urlbartop div svg{

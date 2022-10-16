@@ -73,6 +73,8 @@ function createTabAndIframe(){
     iframe.id = "tab" + nextNumber + "iframe"
     body.appendChild(iframe);
 
+    tabdiv.style.width = "100%"
+
     openTab("tab" + nextNumber + "iframe");
 
     nextNumber = nextNumber + 1

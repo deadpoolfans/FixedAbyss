@@ -7,22 +7,42 @@ function rightClick(e){
 let morebutton = document.getElementById("morebutton")
 let moremenu = document.getElementById("moremenu")
 
+var moremenux = 0
+
+function openMenu(){
+	var moremenurect = morebutton.getBoundingClientRect();
+	moremenu.style.top = moremenurect.y + 30 + "px"
+	moremenu.style.left = moremenurect.x + 15 - 50 + "px"
+	moremenu.style.display = "block"
+	moremenux = moremenurect.x
+}
+
+function closeMenu(){
+	moremenu.style.display = "none"
+}
+
 morebutton.addEventListener("click", ()=>{
 
 	if(moremenu.style.display == "block"){
-		moremenu.style.display = "none"
+		closeMenu();
 	}
 	else{
-		if (tabdirection == "horizontal"){
-			moremenu.style.left = "22.5px"
-			moremenu.style.top = "52.5px"
-			moremenu.style.display = "block"
-		}
-		if (tabdirection == "vertical"){
-			moremenu.style.left = "27.5px"
-			moremenu.style.top = "97.5px"
-			moremenu.style.display = "block"
-		}
+
+		openMenu();
+
+		// moremenu.style.top = document.getElementById("morebutton").offsetTop + 40 + "px"
+		// moremenu.style.left = document.getElementById("morebutton").offsetLeft - 20 + "px"
+		// moremenu.style.display = "block"
+		// if (tabstyle == "horizontal"){
+		// 	moremenu.style.left = "22.5px"
+		// 	moremenu.style.top = "52.5px"
+		// 	moremenu.style.display = "block"
+		// }
+		// if (tabstyle == "vertical"){
+		// 	moremenu.style.left = "27.5px"
+		// 	moremenu.style.top = "97.5px"
+		// 	moremenu.style.display = "block"
+		// }
 	}
 })
 

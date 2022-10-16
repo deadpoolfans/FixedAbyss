@@ -95,7 +95,6 @@ else{
 
 function changeBackground(backgroundurl){
     setCookie("backgroundImage", backgroundurl, "365")
-    console.log(backgroundurl)
     if(backgroundurl == "stars.jpg"){
         homepageimage.style.width = "5076px"
         homepageimage.style.animation = "slide 55s linear infinite"
