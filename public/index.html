@@ -7,10 +7,7 @@
         <link rel="stylesheet" href="styles.css">
 
         <title>Abyss</title>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1433621254584085"
-     crossorigin="anonymous"></script>
     </head>
-
 
     <body>
 
@@ -45,11 +42,11 @@
             <form id="urlbarhomepage">
                 <input placeholder="Search or type a URL..." type="text">
                 <div id="pageimagelinks">
-                    <img src="discord.jpg" tooltip="Discord" onclick="go('https://discord.com')">
-                    <img src="game.png" tooltip="Games" onclick="window.open('./games.html', '_blank')">
-		    <img src="images.png" tooltip="Geforce Now" onclick="go('https://play.geforcenow.com/')">               
-		    <img src="roblox.jpg" tooltip="Roblox" onclick="go('https://now.gg/apps/roblox-corporation/5349/roblox.html')">
- </div>
+                    <img src="discord.png" tooltip="Discord" onclick="go('https://discord.com')">
+                    <img src="games.png" tooltip="Games" onclick="window.open('./games.html', '_blank')">
+                    <img src="geforce.png" tooltip="GeForce Now" onclick="go('https://play.geforcenow.com/')">
+                    <img src="roblox.png" tooltip="Roblox" onclick="go('https://now.gg/apps/roblox-corporation/5349/roblox.html')">
+                </div>
                
             </form>
 
@@ -60,14 +57,6 @@
     </div>
 
         <div id="moremenu">
-
-            <p>Color Theme</p>
-            <div id="lightanddarkmodebuttons">
-
-                <div onclick="lightMode();" id="lightmodebutton"></div>                
-                <div onclick="darkMode();" id="darkmodebutton"></div>
-
-            </div>
 
             <p class="fullscreenbutton">Fullscreen</p>
             <img onclick="openFullscreen();" class="fullscreenbutton fullscreenbuttonimg" src="fullscreen.png">
@@ -89,9 +78,19 @@
             <div id="settings">
 
                 <div id="settingssidebar">
+
+                    <h4>External Settings</h4>
+
                     <div class="settingstab active" onclick="openSettingsTab(event, 'tabcloaking')">
                         <p>Tab Cloaking</p>
                     </div>
+
+                    <h4>Abyss Settings</h4>
+
+                    <div class="settingstab" onclick="openSettingsTab(event, 'tabsettings')">
+                        <p>Tab Orientation</p>
+                    </div>
+
                     <div class="settingstab" onclick="openSettingsTab(event, 'themeselection')">
                         <p>Theme</p>
                     </div>
@@ -112,6 +111,31 @@
                     <input id="newpagetitle" type="text" placeholder="Put your new page title here...">
                     <p>Page Icon</p>
                     <input id="newpageicon" type="text" placeholder="Put your new page icon here...">
+                </div>
+
+                <div class="settingssection" id="tabsettings">
+                    <h1>Tab Orientation/Style</h1>
+                    <div id="taboptions">
+
+                        <div class="taboption">
+                            <img src="horizontaltabsimage.png" onclick="horizontalTabs();">
+                            <p>Horizontal Tabs</p>
+                        </div>
+
+                        <div class="taboption">
+                            <img src="verticaltabsimage.png" onclick="verticalTabs();">
+                            <p>Vertical Tabs</p>
+                        </div>
+
+                        <div class="taboption">
+                            <img src="floatingtabsimage.png" onclick="floatingTabs();">
+                            <p>Floating Tabs</p>
+                        </div>
+
+                        <p>Floating tabs are activated when the mouse cursor moves to the top of the screen.</p>
+                        <p>and when disabling floating tabs you must reload the page</p>
+
+                    </div>
                 </div>
 
                 <div class="settingssection" id="themeselection">
@@ -222,6 +246,9 @@
                         base.style.top = (event.pageY + 5) + 'px';
                         base.style.left = (event.pageX + 5) + 'px';
                         document.body.appendChild(base);
+                        setTimeout(() => {  
+                            base.style.opacity = "1"; 
+                        }, 1000);
                     }
 
                 };

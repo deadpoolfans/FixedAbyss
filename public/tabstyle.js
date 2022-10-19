@@ -36,6 +36,7 @@ function horizontalTabs(){
     tabsandmore.style.position = ""
     tabsandmore.style.top = ""
     tabsandmore.style.width = ""
+    tabsandmore.style.minWidth = ""
     tabsandmore.style.height = ""
     tabsandmore.style.flexDirection = ""
     tabsandmore.style.borderRadius = ""
@@ -103,7 +104,8 @@ function verticalTabs(){
     body.insertBefore(tabsandmore, topbar)
     tabsandmore.style.position = "absolute"
     tabsandmore.style.top = "55px"
-    tabsandmore.style.width = "100px"
+    tabsandmore.style.width = "150px"
+    tabsandmore.style.minWidth = "0px"
     tabsandmore.style.height = "calc(100% - 65px)"
     tabsandmore.style.flexDirection = "column"
     tabsandmore.style.borderRadius = "0rem 0rem 0rem 10px"
@@ -119,9 +121,9 @@ function verticalTabs(){
     newtabandsettings.style.marginBottom = "5px"
 
     let homepage = document.getElementById("homepage")
-    homepage.style.marginLeft = "100px"
+    homepage.style.marginLeft = "150px"
     homepage.style.height = "calc(100% - 45px)"
-    homepage.style.width = "calc(100% - 100px)"
+    homepage.style.width = "calc(100% - 150px)"
     homepage.style.borderRadius = "0rem 0rem 10px 0rem"
 
     function fixVerticalElements(){
@@ -130,8 +132,8 @@ function verticalTabs(){
 
         iframes.forEach(elmnt => {
             elmnt.style.height = "calc(100% - 65px)"
-            elmnt.style.width = "calc(100% - 120px)"
-            elmnt.style.left = "110px"
+            elmnt.style.width = "calc(100% - 170px)"
+            elmnt.style.left = "160px"
             elmnt.style.top = "55px"
             elmnt.style.borderRadius = "0rem 0rem 10px 0rem"
         })

@@ -1,53 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>HTML5 Doodle Jump</title>
-    <link rel="stylesheet" href="style.css">
 
-    <script src="/assets/js/prefixfree.min.js"></script>
-  </head>
-  <body>
-    <div class="container">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="apple-touch-icon" sizes="64x64" href="assets/images/icon.png" />
+		<link rel="shortcut icon" sizes="64x64" href="assets/images/icon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+		<title>Doodle Jump</title>
 
-      <canvas id="canvas">
-        Aww, your browser doesn't support HTML5!
-      </canvas>
+		<style>
+		  body {
+		  	background-color: black;
+		    padding: 0px;
+		    margin: 0px;
+		  }
 
-      <div id="mainMenu">
-        <h1>doodle jump</h1>
-        <h3>using HTML5,</h3>
-        <h3>...by <a href="http://twitter.com/solitarydesigns/" target="_blank">Kushagra Agarwal</a></h3>
-  			<h3>and <a href="http://twitter.com/_rishabhp" target="_blank">Rishabh</a></h3>
+		  #highscore {
+			  position: absolute;
+			  left: calc(-100px);
+			  Top: calc(-100px);
+			  width: 5px;
+			  display: 'none';
+		  }
+		  
+	  </style>
+	  <script type="text/javascript" src="./api.js"></script>
+	</head>
 
-        <p class="info">
-          use
-          <span class="key left">←</span>
-          <span class="key right">→</span>
-          to move and space to (re) start...
-        </p>
-        <a class="button" href="javascript:init()">Play</a>
-      </div>
+	<body>
 
-      <div id="gameOverMenu">
-        <h1>game over!</h1>
-        <h3 id="go_score">you scored 0 points</h3>
+	
 
-        <a class="button" href="javascript:reset()">Restart</a>
-        <a id="tweetBtn" target="_blank" class="button tweet" href="#">Tweet score</a>
+	<script type="text/javascript">
+	CloudAPI.init({
+		'id': 229,
+		'splash': true
+	});
+	CloudAPI.mute = function () {
+	    if (Doodle && !Doodle.game.sound.mute) {
+	        Doodle.game.sound.mute = true;
+	        return true;
+	    }
 
-        <a id="fbBtn" target="_blank" class="button fb" href="#">Post on FB</a>
-      </div>
+        return false;
+    };
 
-      <!-- Preloading image ;) -->
-      <img id="sprite" src="sprites.png"/>
+    CloudAPI.unmute = function () {
+        if (Doodle && Doodle.game.sound.mute) {
+            Doodle.game.sound.mute=false;
+            return true;
+        }
 
-      <div id="scoreBoard">
-        <p id="score">0</p>
-      </div>
+        return false;
+    };
+</script>
+		<input id="highscore" type="text" />
+		<script type="text/javascript" src="js/phaser.min.js"></script>
+		<script type="text/javascript" src="js/fulltilt.min.js"></script>
+		<script type="text/javascript" src="js/build/production.min.js"></script> 
+		<script type="text/javascript" src="js/NoSleep.min.js"></script>
+		<script src="js/main.js"></script>  
+	
+		<script> 
+		var noSleep = new NoSleep();
 
-    </div>
+function enableNoSleep() {
+  noSleep.enable();
+  document.removeEventListener('touchstart', enableNoSleep, false);
+}
 
-    <script src="main.js"></script>
-  </body>
+
+document.addEventListener('touchstart', enableNoSleep, false);
+
+
+	</script>
+
+	</body>
 </html>

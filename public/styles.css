@@ -78,6 +78,8 @@ body{
 }
 
 tooltip {
+    opacity: 0;
+    transition: all .5s ease;
     position: fixed;
     background: var(--background-color);
     color: var(--font-color);
@@ -117,7 +119,7 @@ tooltip {
     border-radius: 10px;
     background: #1F1F1F;
     width: fit-content;
-    margin-left: 5px;
+    margin: 5px;
     box-sizing: border-box;
     padding: 2.5px 0px;
     height: 35px;
@@ -195,7 +197,6 @@ tooltip {
 .tab , .settingstab{
     cursor: default;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background: var(--element-background);
     height: 35px;
@@ -212,21 +213,23 @@ tooltip {
     width: 0px;
     max-width: 125px;
     overflow: hidden;
-    margin: 5px 0px;
-    margin-left: 10px;
+    margin: 5px;
 }
 
-.tab img , .settingstab img{
-    width: 10px;
-    margin-left: 25px;
-}
-
-.tab img{
-    margin-left: 10px;
+.tabfavicon{
+    width: 17.5px;
+    margin-right: 5px;
+    border-radius: 17.5px;
 }
 
 .tab p , .settingstab p{
     margin: 0px;
+    justify-self: baseline;
+}
+
+.tabclose{
+    margin-left: auto;
+    width: 10px;
 }
 
 .tab.active , .settingstab.active{
@@ -234,7 +237,7 @@ tooltip {
 }
 
 #urlbartop{
-    width: 100%;
+    width: calc(100% - 5px);
     height: 35px;
     box-sizing: border-box;
     padding: 5px 0px;
@@ -346,11 +349,13 @@ tooltip {
     justify-content: center;
 }
 
-#pageimagelinks img {
-	width: 40px;
-	border-radius: 25px;
-	
-
+#pageimagelinks img{
+    border-radius: 10px;
+    margin: 0px 5px;
+    cursor: pointer;
+    border: var(--border);
+    height: 40px;
+    background: var(--element-background);
 }
 
 #homepagelinks{
@@ -419,11 +424,24 @@ tooltip {
     width: 100px;
 }
 
+#settingssidebar h4{
+    margin: 10px;
+    text-align: center;
+}
+
+.settingstab img{
+    margin-left: 25px;
+}
+
 .settingstab p{
     font-size: 13px;
 }
 
 .settingssection h1{
+    margin: 0;
+}
+
+#taboptions p{
     margin: 0;
 }
 
@@ -450,7 +468,7 @@ tooltip {
     border: var(--border);
 }
 
-#themeoptions , #backgroundoptions{
+#themeoptions , #backgroundoptions, #taboptions{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -459,17 +477,17 @@ tooltip {
     overflow-y: auto;
 }
 
-.themeoption , .backgroundoption{
+.themeoption , .backgroundoption, .taboption{
     margin: 10px;
 }
 
-.themeoption img , .backgroundoption img, #lighttheme , #darktheme{
+.themeoption img , .backgroundoption img, .taboption img, #lighttheme , #darktheme{
     width: 200px;
     border-radius: 10px;
     height: 125px;
 }
 
-.themeoption p , .backgroundoption p{
+.themeoption p , .backgroundoption p, .taboption p{
     font-size: 13px;
     text-align: center;
     margin: 0;

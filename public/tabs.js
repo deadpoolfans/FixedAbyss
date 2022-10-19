@@ -9,7 +9,7 @@ createTabAndIframe();
 
 function openTab(tabNumber) {
   var tab = document.querySelector("#" + tabNumber.replace("iframe",""))
-  var tabimg = document.querySelector("#" + tabNumber.replace("iframe","") + " img")
+  var tabimg = document.querySelector("#" + tabNumber.replace("iframe","") + " .tabclose")
 
   if(tabimg.getAttribute("listener") !== "true"){
     tabimg.addEventListener("click", ()=>{
@@ -58,15 +58,21 @@ function createTabAndIframe(){
     tabsection.appendChild(tabdiv);
     tabdiv.setAttribute("onclick", "openTab('tab" + nextNumber + "iframe')")
 
+    tabdivfavicon = document.createElement("img")
+    tabdivfavicon.src = "tabfavicon.png"
+    tabdivfavicon.classList.add("tabfavicon");
+    tabdiv.appendChild(tabdivfavicon);
+
     tabdivp = document.createElement("p");
     tabdivp.innerHTML = "Tab"
     tabdiv.appendChild(tabdivp)
 
-    tabdivimg = document.createElement("img");
-    tabdivimg.src = "closetab.png"
-    tabdivimg.classList.add("invert");
-    tabdiv.appendChild(tabdivimg);
-    tabdivimg.setAttribute("listener", "false");
+    tabdivclose = document.createElement("img");
+    tabdivclose.src = "closetab.png"
+    tabdivclose.classList.add("invert");
+    tabdiv.appendChild(tabdivclose);
+    tabdivclose.classList.add("tabclose");
+    tabdivclose.setAttribute("listener", "false");
 
     iframe = document.createElement("iframe");
     iframe.classList.add("iframe");
