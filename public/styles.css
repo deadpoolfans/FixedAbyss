@@ -346,12 +346,11 @@ tooltip {
     justify-content: center;
 }
 
-#pageimagelinks img{
-    border-radius: 10px;
-    margin: 0px 5px;
-    cursor: pointer;
-    border: var(--border);
-    height: 40px;
+#pageimagelinks img {
+	width: 40px;
+	border-radius: 25px;
+	
+
 }
 
 #homepagelinks{
