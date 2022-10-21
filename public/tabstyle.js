@@ -229,22 +229,25 @@ function floatingTabs(){
         if(e.clientY < 10){
             topbar.style.top = "95px"
         }
-        if(moremenu.style.display == "block" && e.clientX > moremenu.getBoundingClientRect().x && e.clientX < moremenu.getBoundingClientRect().x + 101){
-            return;
+        topbar.onmouseleave = function(e){
+
+             if(e.clientY < 35){
+                return;
+            }
+            if(moremenu.style.display == "block" && e.clientX > moremenu.getBoundingClientRect().x && e.clientX < moremenu.getBoundingClientRect().x + 101){
+                return;
+            }
+            else{
+                closeFloatingTabs();
+            }
         }
-        if(e.clientX < topbar.getBoundingClientRect().x){
-            closeFloatingTabs();
-        }
-        if(e.clientX > topbar.getBoundingClientRect().x+ topbar.offsetWidth){
-            closeFloatingTabs();
-        }
-        if(e.clientY > 155){
-            closeFloatingTabs();
-        }
-        // if(e.clientY < topbar.getBoundingClientRect().y){
+        // if(e.clientX < topbar.getBoundingClientRect().x){
         //     closeFloatingTabs();
         // }
-        // if(e.clientY > topbar.getBoundingClientRect().y+ topbar.offsetHeight){
+        // if(e.clientX > topbar.getBoundingClientRect().x+ topbar.offsetWidth){
+        //     closeFloatingTabs();
+        // }
+        // if(e.clientY > 155){
         //     closeFloatingTabs();
         // }
 

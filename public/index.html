@@ -5,6 +5,7 @@
     <head>
         <link rel="icon" type="image/png" href="favicon.png" />
         <link rel="stylesheet" href="styles.css">
+        <script async src="https://arc.io/widget.min.js#gqj2MwmT"></script>
 
         <title>Abyss</title>
     </head>
@@ -253,7 +254,12 @@
 
                 };
                 a[x].onmouseout = function () {
-                    document.getElementsByTagName('tooltip')[0].remove();// Remove last tooltip
+
+                    if (typeof(document.getElementsByTagName('tooltip')[0]) != "undefined" && document.getElementsByTagName('tooltip')[0] != null)
+                    {
+                        document.getElementsByTagName('tooltip')[0].remove();// Remove last tooltip
+
+                    }
                 };
             }
 
