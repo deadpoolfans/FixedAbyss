@@ -12,10 +12,20 @@ function openMenu(){
 	moremenu.style.top = moremenurect.y + 30 + "px"
 	moremenu.style.left = moremenurect.x + 15 - 50 + "px"
 	moremenu.style.display = "block"
+
+	let iframes = document.querySelectorAll(".iframe")
+	iframes.forEach(elmnt => {
+		elmnt.style.pointerEvents = "none"
+	})
 }
 
 function closeMenu(){
 	moremenu.style.display = "none"
+	
+	let iframes = document.querySelectorAll(".iframe")
+	iframes.forEach(elmnt => {
+		elmnt.style.pointerEvents = "all"
+	})
 }
 
 morebutton.addEventListener("click", ()=>{

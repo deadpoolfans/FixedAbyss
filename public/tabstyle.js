@@ -14,6 +14,9 @@ else if(tabStyle == "horizontal"){
 else if(tabStyle == "floating"){
     floatingTabs()
 }
+else if(tabStyle == "gravity"){
+    gravityTabs()
+}
 else{
     horizontalTabs()
 }
@@ -174,6 +177,7 @@ function floatingTabs(){
     topbar.style.left = "50%"
     topbar.style.right = "50%"
     topbar.style.transform = "translate(-50%, -50%)"
+    document.querySelector("#urlbartop input").style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc"
 
     // Postitioning
 
@@ -193,6 +197,9 @@ function floatingTabs(){
         newwidth = newwidth + newtabandsettings.offsetWidth
         newwidth = newwidth + 90 + "px"
         document.getElementsByClassName("topbar")[0].style.width = newwidth
+
+        let tabs = document.querySelectorAll(".tab")
+        tabs.forEach(elmnt => elmnt.style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc")
 
         let iframes = document.querySelectorAll(".iframe")
         iframes.forEach(elmnt => {
@@ -234,23 +241,96 @@ function floatingTabs(){
              if(e.clientY < 35){
                 return;
             }
-            if(moremenu.style.display == "block" && e.clientX > moremenu.getBoundingClientRect().x && e.clientX < moremenu.getBoundingClientRect().x + 101){
+            //if(moremenu.style.display == "block" && e.clientX > moremenu.getBoundingClientRect().x && e.clientX < moremenu.getBoundingClientRect().x + 101){
+            if(moremenu.style.display == "block"){
                 return;
             }
             else{
                 closeFloatingTabs();
             }
         }
-        // if(e.clientX < topbar.getBoundingClientRect().x){
-        //     closeFloatingTabs();
-        // }
-        // if(e.clientX > topbar.getBoundingClientRect().x+ topbar.offsetWidth){
-        //     closeFloatingTabs();
-        // }
-        // if(e.clientY > 155){
+        if(moremenu.style.display == "block"){
+            return;
+        }
+        else if(e.clientX < topbar.getBoundingClientRect().x){
+            closeFloatingTabs();
+        }
+        else if(e.clientX > topbar.getBoundingClientRect().x+ topbar.offsetWidth){
+            closeFloatingTabs();
+        }
+        else if(e.clientY > 155){
+            closeFloatingTabs();
+        }
+        // else{
         //     closeFloatingTabs();
         // }
 
     }
 
 }
+
+function gravityTabs(){
+    horizontalTabs();
+    setCookie("tabStyle", "gravity", "365")
+
+    let body = document.querySelector("body")
+    let tabsandmore = document.getElementsByClassName("tabsandmore")[0]
+    let topbar = document.getElementsByClassName("topbar")[0]
+    let urlbartop = document.getElementById("urlbartop")
+
+    body.insertBefore(tabsandmore, topbar)
+    tabsandmore.style.position = "absolute"
+    tabsandmore.style.top = "15px"
+    tabsandmore.style.left = "15px"
+    tabsandmore.style.borderRadius = "10px"
+    tabsandmore.style.background = "var(--background-color)"
+    tabsandmore.style.width = "calc(100% - 30px)"
+    tabsandmore.style.minWidth = "0"
+    tabsandmore.style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc"
+    tabsandmore.style.backdropFilter = "saturate(3) blur(20px)"
+
+    body.appendChild(urlbartop)
+    urlbartop.style.position = "absolute"
+    urlbartop.style.bottom = "15px"
+    urlbartop.style.left = "15px"
+    urlbartop.style.borderRadius = "8px"
+    urlbartop.style.background = "var(--background-color)"
+    urlbartop.style.width = "calc(100% - 30px)"
+    urlbartop.style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc"
+    document.querySelector("#urlbartop input").style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc"
+    urlbartop.style.backdropFilter = "saturate(3) blur(20px)"
+    
+    let homepage = document.getElementById("homepage")
+    homepage.style.height = "100%"
+    homepage.style.marginTop = "-10px"
+    homepage.style.width = "100%"
+    homepage.style.borderRadius = "10px"
+
+    function fixGravityTabs(){
+        tabstyle = "gravity"
+
+        let tabs = document.querySelectorAll(".tab")
+        tabs.forEach(elmnt => elmnt.style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc")
+
+        let iframes = document.querySelectorAll(".iframe")
+        iframes.forEach(elmnt => {
+            elmnt.style.height = "calc(100% - 90px)"
+            elmnt.style.width = "calc(100% - 20px)"
+            elmnt.style.left = "10px"
+            elmnt.style.top = "10px"
+            elmnt.style.borderRadius = "8px"
+        })
+    }
+
+    fixGravityTabs();
+    
+    var observer = new MutationObserver(function(mutations){
+        mutations.forEach(function(mutation){
+            if(tabstyle == "gravity"){
+                fixGravityTabs();
+            }
+        });
+    });
+    observer.observe(tabsection, {childList: true, subtree: true});
+
+    }

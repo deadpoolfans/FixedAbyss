@@ -100,6 +100,7 @@ tooltip {
     padding: 5px;
     border-radius: 10px 10px 0rem 0rem;
     backdrop-filter: saturate(3) blur(20px);
+    -webkit-backdrop-filter: saturate(3) blur(20px);
     min-width: fit-content;
     transition: all .17s cubic-bezier(.79,.14,.15,.86);
 }
@@ -110,6 +111,7 @@ tooltip {
     box-sizing: border-box;
     min-width: 100%;
     width: fit-content;
+    z-index: 10;
 }
 
 .newtabandsettings{
@@ -214,6 +216,8 @@ tooltip {
     max-width: 125px;
     overflow: hidden;
     margin: 5px;
+    backdrop-filter: saturate(3) blur(20px);
+    -webkit-backdrop-filter: saturate(3) blur(20px);
 }
 
 .tabfavicon{
@@ -233,7 +237,7 @@ tooltip {
 }
 
 .tab.active , .settingstab.active{
-    background: var(--tab-active-background);
+    background: var(--tab-active-background) !important;
 }
 
 #urlbartop{
@@ -243,6 +247,7 @@ tooltip {
     padding: 5px 0px;
     display: flex;
     align-items: center;
+    z-index: 10;
 }
 
 #urlbartop input{
@@ -252,10 +257,12 @@ tooltip {
     border: none;
     outline: none;
     background: var(--element-background);
-    border-radius: 10px;
+    border-radius: 8px;
     text-align: center;
     color: var(--font-color);
     border: var(--border);
+    backdrop-filter: saturate(3) blur(20px);
+    -webkit-backdrop-filter: saturate(3) blur(20px);
 }
 
 #urlbartop div{
@@ -349,13 +356,21 @@ tooltip {
     justify-content: center;
 }
 
-#pageimagelinks img{
+#pageimagelinks div{
     border-radius: 10px;
     margin: 0px 5px;
     cursor: pointer;
     border: var(--border);
-    height: 40px;
     background: var(--element-background);
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pageimagelinks img{
+    height: 40px;
 }
 
 #homepagelinks{
