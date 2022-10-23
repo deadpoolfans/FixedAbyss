@@ -316,10 +316,10 @@ function gravityTabs(){
 
         let iframes = document.querySelectorAll(".iframe")
         iframes.forEach(elmnt => {
-            elmnt.style.height = "calc(100% - 90px)"
-            elmnt.style.width = "calc(100% - 20px)"
-            elmnt.style.left = "10px"
-            elmnt.style.top = "10px"
+            elmnt.style.height = "calc(100% - 130px)"
+            elmnt.style.width = "calc(100% - 30px)"
+            elmnt.style.left = "15px"
+            elmnt.style.top = "70px"
             elmnt.style.borderRadius = "8px"
         })
     }
