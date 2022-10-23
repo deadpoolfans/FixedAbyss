@@ -28,8 +28,7 @@ function horizontalTabs(){
     verticaltabsbutton.forEach(elmnt => elmnt.style.display = "block");
     verticaltabsbuttonimg.style.display = "inline-flex"
 
-    moremenu.style.left = "22.5px"
-    moremenu.style.top = "52.5px"
+    closeMenu();
 
     let body = document.querySelector("body")
     let tabsandmore = document.getElementsByClassName("tabsandmore")[0]
@@ -44,8 +43,8 @@ function horizontalTabs(){
     tabsandmore.style.flexDirection = ""
     tabsandmore.style.borderRadius = ""
     tabsandmore.style.padding = ""
-    tabsandmore.style.zIndex = ""
     tabsandmore.style.background = ""
+    tabsandmore.style.backdropFilter = ""
 
     let tabsection = document.querySelector(".tabsection")
     tabsection.style.flexDirection = ""
@@ -53,12 +52,6 @@ function horizontalTabs(){
     let newtabandsettings = document.getElementsByClassName("newtabandsettings")[0]
     newtabandsettings.style.margin = ""
     newtabandsettings.style.marginBottom = ""
-
-    let homepage = document.getElementById("homepage")
-    homepage.style.marginLeft = ""
-    homepage.style.height = ""
-    homepage.style.width = ""
-    homepage.style.borderRadius = ""
 
     function fixHorizontalElements(){
         tabstyle = "horizontal"
@@ -97,8 +90,7 @@ function verticalTabs(){
     horizontaltabsbutton.forEach(elmnt => elmnt.style.display = "block");
     horizontaltabsbuttonimg.style.display = "inline-flex"
 
-    moremenu.style.left = "27.5px"
-    moremenu.style.top = "97.5px"
+    closeMenu();
 
     let body = document.querySelector("body")
     let tabsandmore = document.getElementsByClassName("tabsandmore")[0]
@@ -113,8 +105,8 @@ function verticalTabs(){
     tabsandmore.style.flexDirection = "column"
     tabsandmore.style.borderRadius = "0rem 0rem 0rem 10px"
     tabsandmore.style.padding = "20px 0px"
-    tabsandmore.style.zIndex = "100"
     tabsandmore.style.background = "var(--background-color)"
+    tabsandmore.style.backdropFilter = "saturate(3) blur(20px)"
 
     let tabsection = document.querySelector(".tabsection")
     tabsection.style.flexDirection = "column"
@@ -122,12 +114,6 @@ function verticalTabs(){
     let newtabandsettings = document.getElementsByClassName("newtabandsettings")[0]
     newtabandsettings.style.margin = "0 auto"
     newtabandsettings.style.marginBottom = "5px"
-
-    let homepage = document.getElementById("homepage")
-    homepage.style.marginLeft = "150px"
-    homepage.style.height = "calc(100% - 45px)"
-    homepage.style.width = "calc(100% - 150px)"
-    homepage.style.borderRadius = "0rem 0rem 10px 0rem"
 
     function fixVerticalElements(){
         tabstyle = "vertical"
@@ -173,7 +159,6 @@ function floatingTabs(){
     topbar.style.padding = "20px"
     topbar.style.flexDirection = "column"
     topbar.style.borderRadius = "10px"
-    topbar.style.zIndex = "100"
     topbar.style.left = "50%"
     topbar.style.right = "50%"
     topbar.style.transform = "translate(-50%, -50%)"
@@ -182,11 +167,6 @@ function floatingTabs(){
     // Postitioning
 
     let newtabandsettings = document.getElementsByClassName("newtabandsettings")[0]
-
-    let homepage = document.getElementById("homepage")
-    homepage.style.height = "100%"
-    homepage.style.width = "100%"
-    homepage.style.borderRadius = "10px"
 
     function fixFloatingElements(){
         tabstyle = "floating"
@@ -278,14 +258,9 @@ function gravityTabs(){
     let topbar = document.getElementsByClassName("topbar")[0]
     let urlbartop = document.getElementById("urlbartop")
     let searchbar = document.getElementById("searchbar")
-    let olddiscordlink = document.getElementById("discord")
-    let oldgameslink = document.getElementById("games")
-    let oldgeforcelink = document.getElementById("geforce")
-    let oldrobloxlink = document.getElementById("roblox")
-    let homepageimage = document.getElementById("homepageimage")
+    let pageimagelinks = document.getElementById("pageimagelinks")
     let urlbarhomepage = document.getElementById("urlbarhomepage")
-    let gay69420 = document.getElementById("gay69420")
-    let gay69 = document.getElementById("gay69")
+    let header = document.querySelector("header")
 
 
     body.insertBefore(tabsandmore, topbar)
@@ -313,21 +288,12 @@ function gravityTabs(){
     urlbartop.innerHTML = "<img class=\"invert\"src=\"discord.png\" width=\"35px\" height=\"35px\" onclick=\"go('discord.com')\"> <img class=\"invert\"src=\"roblox.png\" width=\"35px\" height=\"35px\" onclick=\"go('https://v3.now.gg/play/5349')\"> <img class=\"invert\"src=\"games.png\" width=\"35px\" height=\"35px\" onclick=\"window.open('./games.html', '_blank')\"> <img class=\"invert\"src=\"geforce.png\" width=\"35px\" height=\"35px\" onclick=\"go('play.geforcenow.com')\">"  + urlbarInner;
     searchbar.style.marginLeft = "185px"
     searchbar.style.width = "calc(100% - 200px)"
-    let homepage = document.getElementById("homepage")
-    homepage.style.height = "100%"
-    homepage.style.marginTop = "-10px"
-    homepage.style.width = "100%"
-    homepage.style.borderRadius = "10px"
-    olddiscordlink.remove();
-    oldgameslink.remove();
 
-    oldrobloxlink.remove();
-
-    oldgeforcelink.remove();
+    topbar.style.display = "none"
+    pageimagelinks.remove();
     urlbarhomepage.remove();
-    gay69420.remove();
-    gay69.style.fontSize = "75px";
-    homepageimage.style.backgroundImage = url("abyss.png");
+    header.style.fontSize = "75px";
+    changeBackground("dall-e1.png");
     
 
     function fixGravityTabs(){

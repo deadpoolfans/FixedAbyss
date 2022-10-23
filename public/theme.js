@@ -34,8 +34,8 @@ function darkMode(){
 function lightMode(){
     setCookie("colorTheme", "light", "365");
 
-    root.style.setProperty("--element-background", "#DFDFDF");
-    root.style.setProperty("--background-color", "#F4F4F4");
+    root.style.setProperty("--element-background", "#DFDFDFcc");
+    root.style.setProperty("--background-color", "#F4F4F4cc");
     root.style.setProperty("--font-color", "black");
     root.style.setProperty("--border", "1.75px solid #b3b1ad")
     root.style.setProperty("--tab-active-background", "#CFCFCF");

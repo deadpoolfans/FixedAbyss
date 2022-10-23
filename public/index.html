@@ -45,8 +45,7 @@
 
         <div id="homepage">
             <div id="homepageimage"></div>
-            <b><header id="gay69" style="font-family: Segoe UI Variable, Segoe UI;font-size: 50px;">Abyss</header></b>
-            <h2 id="gay69420">Far Out.</h2>
+            <b><header>Abyss</header></b>
             <form id="urlbarhomepage">
                 <input placeholder="Search or type a URL..." type="text">
                 <div id="pageimagelinks">
@@ -131,27 +130,41 @@
 
                 <div class="settingssection" id="tabsettings">
                     <h1>Tab Orientation/Style</h1>
-                    <div id="taboptions">
+
+                    <h4>V1</h4>
+
+                    <div class="taboptions">
 
                         <div class="taboption">
-                            <img src="horizontaltabsimage.png" onclick="horizontalTabs();">
+                            <img src="horizontaltabsimage.png" onclick="horizontalTabs();location.reload();">
                             <p>Horizontal Tabs</p>
                         </div>
 
                         <div class="taboption">
-                            <img src="verticaltabsimage.png" onclick="verticalTabs();">
+                            <img src="verticaltabsimage.png" onclick="verticalTabs();location.reload();">
                             <p>Vertical Tabs</p>
                         </div>
 
+                    </div>
+
+                    <h4>V2</h4>
+
+                    <div class="taboptions">
+
                         <div class="taboption">
-                            <img src="floatingtabsimage.png" onclick="floatingTabs();">
+                            <img src="floatingtabsimage.png" onclick="floatingTabs();location.reload();">
                             <p>Floating Tabs</p>
                         </div>
 
-                        <p>Floating tabs are activated when the mouse cursor moves to the top of the screen.</p>
-                        <p>When disabling floating tabs you must reload the page</p>
+                        <div class="taboption">
+                            <img src="gravitytabsimage.png" onclick="gravityTabs();location.reload();">
+                            <p>Gravity Tabs</p>
+                        </div>
 
                     </div>
+
+                    <h5>After changing the page type, the page will reload.</h5>
+
                 </div>
 
                 <div class="settingssection" id="themeselection">
@@ -171,12 +184,12 @@
                         </div>
 
                         <div class="themeoption">
-                            <img id="spacetheme" src="stars.jpg">
+                            <img id="spacetheme" src="stars.jpg" onclick="darkMode();changeBackground('stars.jpg');">
                             <p>Space</p>
                         </div>
 
                         <div class="themeoption">
-                            <img id="oceantheme" src="ocean.jpg">
+                            <img id="oceantheme" src="ocean.jpg" onclick="lightMode();changeBackground('ocean.jpg')">
                             <p>Ocean</p>
                         </div>
 
@@ -196,8 +209,13 @@
                         </div>
 
                         <div class="backgroundoption">
-                            <img src="ocean.jpg" id="oceanbackground" onclick="changeBackground(this.getAttribute('src'))">
+                            <img id="oceanbackground" src="ocean.jpg" onclick="changeBackground(this.getAttribute('src'))">
                             <p>Ocean</p>
+                        </div>
+
+                        <div class="backgroundoption">
+                            <img id="dallebackground1" src="dall-e1.png" onclick="changeBackground(this.getAttribute('src'))">
+                            <p>Dall-e background 1</p>
                         </div>
 
                         <div class="backgroundoption">

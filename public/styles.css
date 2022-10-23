@@ -1,6 +1,6 @@
 :root{
-    --element-background: #343434;
-    --background-color: #2a2a2a;
+    --element-background: #343434cc;
+    --background-color: #2a2a2acc;
     --font-color: white;
     --border: 1.75px solid #4C4E52;
     --tab-active-background: #444444;
@@ -88,6 +88,7 @@ tooltip {
     border-radius: 10px;
     padding: 5px 10px;
     z-index: 10000000000;
+    backdrop-filter: saturate(3) blur(20px);
 }
 
 .invert{
@@ -103,6 +104,8 @@ tooltip {
     -webkit-backdrop-filter: saturate(3) blur(20px);
     min-width: fit-content;
     transition: all .17s cubic-bezier(.79,.14,.15,.86);
+    z-index: 100;
+    position: relative;
 }
 
 .tabsandmore{
@@ -111,7 +114,7 @@ tooltip {
     box-sizing: border-box;
     min-width: 100%;
     width: fit-content;
-    z-index: 10;
+    z-index: 100;
 }
 
 .newtabandsettings{
@@ -157,6 +160,7 @@ tooltip {
     z-index: 1000000000;
     right: -1000000px;
     bottom: -10000000px;
+    backdrop-filter: saturate(3) blur(20px);
 }
 
 #moremenu p{
@@ -282,10 +286,10 @@ tooltip {
     overflow: hidden;
     text-align: center;
     background-color: #000410;
-    width: 100%;
-    height: calc(100% - 90px);
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
     border: none;
-    border-radius: 0rem 0rem 10px 10px;
+    border-radius: 10px;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -296,7 +300,10 @@ tooltip {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 0;
 }
 
 @keyframes slide{
@@ -328,6 +335,12 @@ tooltip {
     background-size: cover;
 }
 
+header{
+    font-family: Segoe UI Variable, Segoe UI;
+    font-size: 50px;
+    margin: 10px 0px;
+}
+
 #urlbarhomepage{
     width: 300px;
     height: 50px;
@@ -347,6 +360,7 @@ tooltip {
     text-align: center;
     color: var(--font-color);
     border: var(--border);
+    backdrop-filter: saturate(3) blur(20px);
 }
 
 #pageimagelinks{
@@ -367,6 +381,7 @@ tooltip {
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: saturate(3) blur(20px);
 }
 
 #pageimagelinks img{
@@ -400,6 +415,7 @@ tooltip {
     left: 10px;
     display: none;
     z-index: 10;
+    backdrop-filter: saturate(3) blur(20px);
 }
 
 #settingsbackground{
@@ -427,6 +443,7 @@ tooltip {
     align-items: center;
     justify-content: center;
     border: var(--border);
+    backdrop-filter: saturate(3) blur(20px);
 }
 
 #settings *{
@@ -456,7 +473,7 @@ tooltip {
     margin: 0;
 }
 
-#taboptions p{
+.taboptions p{
     margin: 0;
 }
 
@@ -467,6 +484,7 @@ tooltip {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-y: auto;
 }
 
 .settingssection input{
@@ -483,13 +501,12 @@ tooltip {
     border: var(--border);
 }
 
-#themeoptions , #backgroundoptions, #taboptions{
+#themeoptions , #backgroundoptions, .taboptions{
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     height: fit-content;
-    overflow-y: auto;
 }
 
 .themeoption , .backgroundoption, .taboption{
