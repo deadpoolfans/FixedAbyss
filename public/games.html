@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <style>
         body{
@@ -59,12 +59,11 @@
         
         .background{
             background-image: url("stars.jpg");
-            width: 5076px;
-            height: 5076px;
-            animation: slide 55s linear infinite;
+            width: 15076px;
+            height: 100%;
             position: absolute;
-            z-index: 0;
             background-size: cover;
+            animation: slide 55s linear infinite;
         }
 
         .games{
@@ -76,12 +75,15 @@
             font-family: Segoe UI Variable, Segoe UI;
             color: white;
             z-index: 1000;
+            height: 150px;  
         }
 
         .games>img {
             width: 64px;
         }
     </style>
+    <title>Abyss</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 
 <body>
@@ -119,16 +121,15 @@
         <p>Bounce Back</p>
     </button>
     <button onclick="window.location.href = './games/breaklock'" class="games">
-        <img src="https://store-images.s-microsoft.com/image/apps.367.14034459069970558.9d93c2cc-e2ad-4f8f-8dc1-2bd701c9cafc.61393a96-f3ee-4d17-a280-d16f853114f5?mode=scale&q=90&h=200&w=200&background=%230078D7"
-            alt="BreakLock">
+        <img src="./games/thumbnails/breaklock.png" alt="BreakLock">
         <p>BreakLock</p>
     </button>
     <button onclick="window.location.href = './games/breakout'" class="games">
-        <img src="/games/thumbnails/breakout.png" alt="Breakout">
+        <img src="./games/thumbnails/breakout.png" alt="Breakout">
         <p>Breakout</p>
     </button>
     <button onclick="window.location.href = './games/btd4'" class="games">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH1x0xw8Fd638Ugr0M461WFf4AFikQfqHOWE40h0HZbSz7-8unXcVDM3fTi2Zwyy9lF_U:https://static.wikia.nocookie.net/b__/images/4/4b/BTD4-PromoArt.png/revision/latest%3Fcb%3D20200711194940%26path-prefix%3Dbloons&usqp=CAU" alt="BTD 4">
+        <img src="./games/thumbnails/bloons.png" alt="BTD 4">
         <p>Bloons Tower Defense 4<p>
     </button>
     <button onclick="window.location.href = './games/captaincallisto'" class="games">
@@ -136,14 +137,18 @@
         <p>Captain Callisto<p>
     </button>
     <button onclick="window.location.href = './games/chess'" class="games">
-        <img src="" alt="Chess">
+        <img src="./games/thumbnails/chess.png" alt="Chess">
         <p>Chess<p>
     </button>
     <button onclick="window.location.href = './games/chroma'" class="games">
         <img src="./games/thumbnails/chroma.jpg" alt="The Chroma Incident">
         <p>Chroma</p>
     </button>
-<button onclick="window.location.href = './games/cookie'" class="games">
+    <button onclick="window.location.href = './games/connect3'" class="games">
+        <img src="./games/thumbnails/connect3.png" alt="Connect 3">
+        <p>Connect 3</p>
+    </button>
+    <button onclick="window.location.href = './games/cookie'" class="games">
         <img src="./games/thumbnails/cookie-clicker.jpg" alt="Cookie Clicker">
         <p>Cookie Clicker</p>
     </button>
@@ -179,9 +184,17 @@
         <img src="./games/thumbnails/ducklife4.jpg" alt="Ducklife 4">
         <p>Ducklife 4</p>
     </button>
-    <button onclick="window.location.href = './games/Evo-Explores'" class="games">
-        <img src="./games/thumbnails/EvoExplores.jpg" alt="Evo Explores">
-        <p>Evo Explores</p>
+    <button onclick="window.location.href = './games/edgenotfound'" class="games">
+        <img src="./games/thumbnails/noedgefound.png" alt="Edge Not Found">
+        <p>Edge Not Found</p>
+    </button>
+    <button onclick="window.location.href = './games/evilglitch'" class="games">
+        <img src="./games/thumbnails/Evilglitch.jpg" alt="Evil Glitch">
+        <p>Evil Glitch</p>
+    </button>
+    <button onclick="window.location.href = './games/factoryballsforever'" class="games">
+        <img src="./games/thumbnails/factoryballs.png" alt="Factory Balls Forever">
+        <p>Factory Balls Forever</p>
     </button>
     <button onclick="window.location.href = './games/fireboy-and-watergirl-forest-temple'" class="games">
         <img src="./games/thumbnails/fireboy-and-watergirl-forest-temple.jpg" alt="Fireboy and Watergirl">
@@ -215,6 +228,10 @@
         <img src="./games/thumbnails/hex-tris.jpg" alt="Hex-tris">
         <p>Hex-Tris</p>
     </button>
+    <button onclick="window.location.href = './games/konnekt'" class="games">
+        <img src="./games/thumbnails/konnekt.png" alt="Konnekt">
+        <p>Konnekt</p>
+    </button>
     <button onclick="window.location.href = './games/mc-classic'" class="games">
         <img src="./games/thumbnails/minecraft.jpg" alt="Minecraft Classic">
         <p>Minecraft Classic</p>
@@ -223,9 +240,37 @@
         <img style="width: 100px;" src="./games/thumbnails/flight-simulator.jpg" alt="Microsoft Flight Simulator">
         <p>Microsoft Flight Simulator</p>
     </button>
+    <button onclick="window.location.href = './games/ninjavsevilcorp'" class="games">
+        <img src="./games/thumbnails/ninjavs.png" alt="Ninja vs EVILCORP">
+        <p>Ninja vs EVILCORP</p>
+    </button>
+    <button onclick="window.location.href = './games/ovo'" class="games">
+        <img src="./games/thumbnails/ovo.png" alt="OvO">
+        <p>OvO</p>
+    </button>
+    <button onclick="window.location.href = './games/packabunchas'" class="games">
+        <img src="./games/thumbnails/packa.png" alt="PackaBunchas">
+        <p>PackaBunchas</p>
+    </button>
     <button onclick="window.location.href = './games/pacman'" class="games">
         <img src="./games/thumbnails/pacman.jpg" alt="Pac-Man">
         <p>Pac-Man</p>
+    </button>
+    <button onclick="window.location.href = './games/particleclicker'" class="games">
+        <img src="./games/particleclicker/assets/favicon.png" alt="Particle Clicker">
+        <p>Particle Clicker</p>
+    </button>
+    <button onclick="window.location.href = './games/pushback'" class="games">
+        <img src="./games/thumbnails/pushback.png" alt="Push Back">
+        <p>Push Back</p>
+    </button>
+    <button onclick="window.location.href = './games/q1k3'" class="games">
+        <img src="./games/thumbnails/q1k3.png" alt="Q1K3">
+        <p>Q1K3</p>
+    </button>
+    <button onclick="window.location.href = './games/racer'" class="games">
+        <img src="./games/thumbnails/racer.png" alt="Racer">
+        <p>Racer</p>
     </button>
     <button onclick="window.location.href = './games/radius-raid'" class="games">
         <img src="./games/thumbnails/radiusraid.jpg" alt="Radius Raid">
@@ -234,13 +279,30 @@
     <button onclick="window.location.href = './games/retro-bowl'" class="games">
         <img src="./games/thumbnails/retro-bowl.jpg" alt="Retro Bowl">
         <p>Retro Bowl</p>
-    </button><button onclick="window.location.href = './games/ritz'" class="games">
+    </button>
+    <button onclick="window.location.href = './games/retrohaunt'" class="games">
+        <img src="./games/thumbnails/retrohaunt.png" alt="Retrohaunt">
+        <p>Retrohaunt</p>
+    </button>
+    <button onclick="window.location.href = './games/ritz'" class="games">
         <img src="./games/thumbnails/ritz.jpg" alt="Ritz">
         <p>Ritz</p>
+    </button>
+    <button onclick="window.location.href = './games/roadblocks'" class="games">
+        <img src="./games/thumbnails/roadblocks.png" alt="Road Blocks">
+        <p>Road Blocks</p>
     </button>
     <button onclick="window.location.href = './games/run3'" class="games">
         <img src="./games/thumbnails/run3.jpg" alt="Run 3">
         <p>Run 3</p>
+    </button>
+    <button onclick="window.location.href = './games/shuttledeck'" class="games">
+        <img src="./games/thumbnails/shuttledeck.png" alt="Shuttledeck">
+        <p>Shuttledeck</p>
+    </button>
+    <button onclick="window.location.href = './games/sleepingbeauty'" class="games">
+        <img src="./games/thumbnails/sleepingbeauty.png" alt="Sleeping Beauty">
+        <p>Sleeping Beauty</p>
     </button>
     <button onclick="window.location.href = './games/slope'" class="games">
         <img src="./games/thumbnails/slope.jpg" alt="Slope">
@@ -250,13 +312,49 @@
         <img src="./games/thumbnails/sm64.jpg" alt="SM64">
         <p>Super Mario 64</p>
     </button>
-    <button onclick="window.location.href = './games/friendlyfire'" class="games">
-        <img src="./games/thumbnails/friendlyfire.jpg" alt="Friendly Fire">
-        <p>Friendly Fire</p>
+    <button onclick="window.location.href = './games/snake'" class="games">
+        <img src="./games/thumbnails/snake.png" alt="Snake">
+        <p>Snake</p>
+    </button>
+    <button onclick="window.location.href = './games/spacecompany'" class="games">
+        <img src="./games/spacecompany/Icons/SpaceCompanyFavicon.png" alt="Space Company">
+        <p>Space Company</p>
+    </button>
+    <button onclick="window.location.href = './games/spacegarden'" class="games">
+        <img src="./games/thumbnails/spacegarden.png" alt="Space Garden">
+        <p>Space Garden</p>
+    </button>
+    <button onclick="window.location.href = './games/spacehuggers'" class="games">
+        <img src="./games/thumbnails/spacehuggers.png" alt="Space Huggers">
+        <p>Space Huggers</p>
     </button>
     <button onclick="window.location.href = './games/spaceinvaders'" class="games">
         <img src="./games/thumbnails/spaceinvaders.jpg" alt="Space Invaders">
         <p>Space Invaders</p>
+    </button>
+    <button onclick="window.location.href = './games/subwaysurfers'" class="games">
+        <img src="./games/thumbnails/subway.png" alt="Subway Surfers">
+        <p>Subway Surfers</p>
+    </button>
+    <button onclick="window.location.href = './games/tetris'" class="games">
+        <img src="./games/thumbnails/tetris.png">
+        <p>Tetris</p>
+    </button>
+    <button onclick="window.location.href = './games/themazeofspacegoblins'" class="games">
+        <img src="./games/thumbnails/spacetraveler.png">
+        <p>The maze of space goblins</p>
+    </button>
+    <button onclick="window.location.href = './games/towermaster'" class="games">
+        <img src="./games/thumbnails/twoer.png">
+        <p>Tower Master</p>
+    </button>
+    <button onclick="window.location.href = './games/trimps'" class="games">
+        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1877960/ss_c652592d5a4d2cea8cbd1437f16a66f097929855.1920x1080.jpg?t=1651517965 ">
+        <p>Trimps</p>
+    </button>
+    <button onclick="window.location.href = './games/underrrun'" class="games">
+        <img src="https://js13kgames.com/games/underrun/__big.jpg">
+        <p>Underrun</p>
     </button>
     <button onclick="window.location.href = './games/vex3'" class="games">
         <img src="./games/thumbnails/vex3.jpg" alt="Vex 3">
@@ -269,6 +367,10 @@
     <button onclick="window.location.href = './games/vex5'" class="games">
         <img src="./games/thumbnails/vex5.jpg" alt="Vex 5">
         <p>Vex 5</p>
+    </button>
+    <button onclick="window.location.href = './games/xx142-b2exe'" class="games">
+        <img src="https://images.crazygames.com/games/xx142-b2-exe/thumb-1571392772642.png?auto=format,compress&q=45&cs=strip&ch=DPR&w=1200&h=630&fit=crop">
+        <p>xx142-b2.exe</p>
     </button>
 
     <div class="background"></div>
@@ -285,6 +387,7 @@
     </script>
 
 </body>
+</html>
 <!--
         just need to use onclick:
             onclick="window.location.href  = "GAME FOLDER NAME"

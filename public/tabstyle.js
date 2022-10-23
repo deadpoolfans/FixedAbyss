@@ -1,3 +1,4 @@
+
 var tabstyle = "horizontal"
 let verticaltabsbutton = document.querySelectorAll(".verticaltabsbutton")
 let horizontaltabsbutton = document.querySelectorAll(".horizontaltabsbutton")
@@ -8,7 +9,7 @@ let tabStyle = getCookie("tabStyle")
 if(tabStyle == "vertical"){
     verticalTabs()
 }
-else if(tabStyle == "horizontal"){
+else if(tabStyle == "horizonimage.png"){
     horizontalTabs()
 }
 else if(tabStyle == "floating"){
@@ -257,11 +258,11 @@ function gravityTabs(){
     let tabsandmore = document.getElementsByClassName("tabsandmore")[0]
     let topbar = document.getElementsByClassName("topbar")[0]
     let urlbartop = document.getElementById("urlbartop")
-    let searchbar = document.getElementById("searchbar")
+    let searchbar = document.querySelector("#urlbartop input")
     let pageimagelinks = document.getElementById("pageimagelinks")
     let urlbarhomepage = document.getElementById("urlbarhomepage")
     let header = document.querySelector("header")
-
+    let openinnewtab = document.getElementById("openinnewtab")
 
     body.insertBefore(tabsandmore, topbar)
     tabsandmore.style.position = "absolute"
@@ -285,16 +286,27 @@ function gravityTabs(){
     document.querySelector("#urlbartop input").style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc"
     urlbartop.style.backdropFilter = "saturate(3) blur(20px)"
     var urlbarInner = urlbartop.innerHTML;
-    urlbartop.innerHTML = "<img class=\"invert\"src=\"discord.png\" width=\"35px\" height=\"35px\" onclick=\"go('discord.com')\"> <img class=\"invert\"src=\"roblox.png\" width=\"35px\" height=\"35px\" onclick=\"go('https://v3.now.gg/play/5349')\"> <img class=\"invert\"src=\"games.png\" width=\"35px\" height=\"35px\" onclick=\"window.open('./games.html', '_blank')\"> <img class=\"invert\"src=\"geforce.png\" width=\"35px\" height=\"35px\" onclick=\"go('play.geforcenow.com')\">"  + urlbarInner;
-    searchbar.style.marginLeft = "185px"
-    searchbar.style.width = "calc(100% - 200px)"
-
-    topbar.style.display = "none"
-    pageimagelinks.remove();
+    //var newgamesforurlbar = "<img class=\"invert\"src=\"discord.png\" width=\"35px\" height=\"35px\" onclick=\"go('discord.com')\"> <img class=\"invert\"src=\"roblox.png\" width=\"35px\" height=\"35px\" onclick=\"go('https://v3.now.gg/play/5349')\"> <img class=\"invert\"src=\"games.png\" width=\"35px\" height=\"35px\" onclick=\"window.open('./games.html', '_blank')\"> <img class=\"invert\"src=\"geforce.png\" width=\"35px\" height=\"35px\" onclick=\"go('play.geforcenow.com')\">" 
+    urlbartop.insertBefore(pageimagelinks,searchbar)
     urlbarhomepage.remove();
+
+    pageimagelinks.style.marginBottom = "5px"
+    pageimagelinks.style.marginLeft = "3px"
+    let pageimagelinkdivs = document.querySelectorAll("#pageimagelinks div");
+    let pageimagelinkimages = document.querySelectorAll("#pageimagelinks img");
+    pageimagelinkdivs.forEach(elmnt => {
+        elmnt.style.width =  "25px"
+        elmnt.style.height = "25px"
+    })
+    pageimagelinkimages.forEach(elmnt => {
+        elmnt.style.width =  "25px"
+        elmnt.style.height = "25px"
+    })
+    openinnewtab.style.marginRight = "4px";
+    topbar.style.display = "none"
+    //pageimagelinks.remove();
+    changeBackground("dall-e1.png")
     header.style.fontSize = "75px";
-    changeBackground("dall-e1.png");
-    
 
     function fixGravityTabs(){
         tabstyle = "gravity"

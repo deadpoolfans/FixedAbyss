@@ -2,7 +2,7 @@ const form = document.querySelectorAll("form");
 const input = document.querySelector("input");
 let iframe = document.getElementById("iframe");
 let urlbarhomepage = document.querySelector('#urlbarhomepage input');
-let urlbartop = document.querySelector('#urlbartop input');
+let urlbartop = document.querySelector('#searchbar');
 
 form.forEach(item => {
   item.addEventListener("submit", async (event) => {
@@ -40,12 +40,14 @@ async function getIframeFavicon(value) {
 
 urlbarhomepage.onkeydown = function (event){
   if (event.key === 'Enter'){
+    event.preventDefault
     go(urlbarhomepage.value.replace("http://", "https://"));
   } 
 }
 
 urlbartop.onkeydown = function (event){
   if (event.key === 'Enter'){
+    event.preventDefault
     go(urlbartop.value.replace("http://", "https://"));
   }
 }

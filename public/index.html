@@ -36,7 +36,7 @@
             </div>
             <form id="urlbartop">
                 <input placeholder="Search or type a URL..." type="text" id="searchbar">
-                <div tooltip="Open in new tab">
+                <div id="openinnewtab" tooltip="Open in new tab">
                     <svg onclick="window.open(document.querySelector('.iframe.active').src, '_blank');" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill-rule="evenodd" viewBox="0 0 48 48"><path stroke-width="0px" stroke-linecap="round" shape-rendering="geometricPrecision" d="M 38 38 H 10 V 10 h 14 V 6 H 10 c -2.21 0 -4 1.79 -4 4 v 28 c 0 2.21 1.79 4 4 4 h 28 c 2.21 0 4 -1.79 4 -4 V 24 h -4 v 14 Z M 28 6 v 4 h 7.17 L 15.51 29.66 l 2.83 2.83 L 38 12.83 V 20 h 4 V 6 H 28 Z"></path></svg>
                 </div>
             </form>
@@ -136,12 +136,12 @@
                     <div class="taboptions">
 
                         <div class="taboption">
-                            <img src="horizontaltabsimage.png" onclick="horizontalTabs();location.reload();">
+                            <img src="horizontaltabsimage.png" onclick="setCookie('tabStyle', 'horizontal', '365');location.reload();">
                             <p>Horizontal Tabs</p>
                         </div>
 
                         <div class="taboption">
-                            <img src="verticaltabsimage.png" onclick="verticalTabs();location.reload();">
+                            <img src="verticaltabsimage.png" onclick="setCookie('tabStyle', 'vertical', '365');location.reload();">
                             <p>Vertical Tabs</p>
                         </div>
 
@@ -152,12 +152,12 @@
                     <div class="taboptions">
 
                         <div class="taboption">
-                            <img src="floatingtabsimage.png" onclick="floatingTabs();location.reload();">
+                            <img src="floatingtabsimage.png" onclick="setCookie('tabStyle', 'floating', '365');location.reload();">
                             <p>Floating Tabs</p>
                         </div>
 
                         <div class="taboption">
-                            <img src="gravitytabsimage.png" onclick="gravityTabs();location.reload();">
+                            <img src="gravitytabsimage.png" onclick="changeBackground('dall-e1.png');setCookie('tabStyle', 'gravity', '365');location.reload();">
                             <p>Gravity Tabs</p>
                         </div>
 
@@ -299,8 +299,9 @@
             })();
         </script>
         <script src="theme.js"></script>
-        <script src="tabstyle.js"></script>
         <script src="settings.js"></script>
+        <script src="tabstyle.js"></script>
+        
 
     </body>
 
