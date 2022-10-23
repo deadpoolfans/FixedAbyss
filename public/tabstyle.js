@@ -53,7 +53,7 @@ function horizontalTabs(){
     let newtabandsettings = document.getElementsByClassName("newtabandsettings")[0]
     newtabandsettings.style.margin = ""
     newtabandsettings.style.marginBottom = ""
-
+    changeBackground("stars.png");
     function fixHorizontalElements(){
         tabstyle = "horizontal"
         let iframes = document.querySelectorAll(".iframe")
@@ -115,7 +115,7 @@ function verticalTabs(){
     let newtabandsettings = document.getElementsByClassName("newtabandsettings")[0]
     newtabandsettings.style.margin = "0 auto"
     newtabandsettings.style.marginBottom = "5px"
-
+changeBackground("stars.png");
     function fixVerticalElements(){
         tabstyle = "vertical"
         let iframes = document.querySelectorAll(".iframe")
@@ -164,7 +164,7 @@ function floatingTabs(){
     topbar.style.right = "50%"
     topbar.style.transform = "translate(-50%, -50%)"
     document.querySelector("#urlbartop input").style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc"
-
+changeBackground("dall-e1.png");
     // Postitioning
 
     let newtabandsettings = document.getElementsByClassName("newtabandsettings")[0]
