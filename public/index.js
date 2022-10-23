@@ -44,7 +44,7 @@ urlbarhomepage.onkeydown = function (event){
   } 
 }
 
-urlbartop.onkeydown = function (event){
+searchbar.onkeydown = function (event){
   if (event.key === 'Enter'){
     go(urlbartop.value.replace("http://", "https://"));
   }
