@@ -161,7 +161,6 @@ function floatingTabs(){
     topbar.style.left = "50%"
     topbar.style.right = "50%"
     topbar.style.transform = "translate(-50%, -50%)"
-    document.querySelector("#urlbartop input").style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc"
     // Postitioning
 
     let newtabandsettings = document.getElementsByClassName("newtabandsettings")[0]
@@ -175,9 +174,6 @@ function floatingTabs(){
         newwidth = newwidth + newtabandsettings.offsetWidth
         newwidth = newwidth + 90 + "px"
         document.getElementsByClassName("topbar")[0].style.width = newwidth
-
-        let tabs = document.querySelectorAll(".tab")
-        tabs.forEach(elmnt => elmnt.style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc")
 
         let iframes = document.querySelectorAll(".iframe")
         iframes.forEach(elmnt => {
@@ -199,9 +195,6 @@ function floatingTabs(){
         });
     });
     observer.observe(tabsection, {childList: true, subtree: true});
-
-    // Blur effects
-    topbar.style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc"
 
     //Enabling
 
@@ -269,7 +262,6 @@ function gravityTabs(){
     tabsandmore.style.background = "var(--background-color)"
     tabsandmore.style.width = "calc(100% - 30px)"
     tabsandmore.style.minWidth = "0"
-    tabsandmore.style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc"
     tabsandmore.style.backdropFilter = "saturate(3) blur(20px)"
 
     body.appendChild(urlbartop)
@@ -279,8 +271,6 @@ function gravityTabs(){
     urlbartop.style.borderRadius = "8px"
     urlbartop.style.background = "var(--background-color)"
     urlbartop.style.width = "calc(100% - 30px)"
-    urlbartop.style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc"
-    document.querySelector("#urlbartop input").style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc"
     urlbartop.style.backdropFilter = "saturate(3) blur(20px)"
     var urlbarInner = urlbartop.innerHTML;
     //var newgamesforurlbar = "<img class=\"invert\"src=\"discord.png\" width=\"35px\" height=\"35px\" onclick=\"go('discord.com')\"> <img class=\"invert\"src=\"roblox.png\" width=\"35px\" height=\"35px\" onclick=\"go('https://v3.now.gg/play/5349')\"> <img class=\"invert\"src=\"games.png\" width=\"35px\" height=\"35px\" onclick=\"window.open('./games.html', '_blank')\"> <img class=\"invert\"src=\"geforce.png\" width=\"35px\" height=\"35px\" onclick=\"go('play.geforcenow.com')\">" 
@@ -308,7 +298,6 @@ function gravityTabs(){
         tabstyle = "gravity"
 
         let tabs = document.querySelectorAll(".tab")
-        tabs.forEach(elmnt => elmnt.style.background = getComputedStyle(root).getPropertyValue("--background-color") + "cc")
 
         let iframes = document.querySelectorAll(".iframe")
         iframes.forEach(elmnt => {

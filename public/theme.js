@@ -38,7 +38,7 @@ function lightMode(){
     root.style.setProperty("--background-color", "#F4F4F4cc");
     root.style.setProperty("--font-color", "black");
     root.style.setProperty("--border", "1.75px solid #b3b1ad")
-    root.style.setProperty("--tab-active-background", "#CFCFCF");
+    root.style.setProperty("--tab-active-background", "#CFCFCFcc");
     root.style.setProperty("--invert", "0");
 
     document.querySelector("body").style.background = "#e7e7e7"
