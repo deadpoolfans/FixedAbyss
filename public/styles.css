@@ -222,12 +222,14 @@ tooltip {
     margin: 5px;
     backdrop-filter: saturate(3) blur(20px);
     -webkit-backdrop-filter: saturate(3) blur(20px);
+    padding: 0px;
 }
 
 .tabfavicon{
     width: 17.5px;
     margin-right: 5px;
     border-radius: 17.5px;
+    margin-left: 10px;
 }
 
 .tab p , .settingstab p{
@@ -238,6 +240,7 @@ tooltip {
 .tabclose{
     margin-left: auto;
     width: 10px;
+    margin-right: 10px;
 }
 
 .tab.active , .settingstab.active{
