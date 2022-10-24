@@ -204,12 +204,12 @@ function floatingTabs(){
     }
 
     onmousemove = function(e){
-        if(e.clientY < 10){
+        if(e.clientY < 50){
             topbar.style.top = "95px"
         }
         topbar.onmouseleave = function(e){
 
-             if(e.clientY < 35){
+             if(e.clientY < 85){
                 return;
             }
             //if(moremenu.style.display == "block" && e.clientX > moremenu.getBoundingClientRect().x && e.clientX < moremenu.getBoundingClientRect().x + 101){
