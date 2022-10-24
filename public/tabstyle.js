@@ -270,7 +270,7 @@ function gravityTabs(){
     urlbartop.style.left = "15px"
     urlbartop.style.borderRadius = "8px"
     urlbartop.style.background = "var(--background-color)"
-    urlbartop.style.width = "calc(100% - 60px)"
+    urlbartop.style.width = "calc(100% - 30px)"
     urlbartop.style.backdropFilter = "saturate(3) blur(20px)"
     var urlbarInner = urlbartop.innerHTML;
     //var newgamesforurlbar = "<img class=\"invert\"src=\"discord.png\" width=\"35px\" height=\"35px\" onclick=\"go('discord.com')\"> <img class=\"invert\"src=\"roblox.png\" width=\"35px\" height=\"35px\" onclick=\"go('https://v3.now.gg/play/5349')\"> <img class=\"invert\"src=\"games.png\" width=\"35px\" height=\"35px\" onclick=\"window.open('./games.html', '_blank')\"> <img class=\"invert\"src=\"geforce.png\" width=\"35px\" height=\"35px\" onclick=\"go('play.geforcenow.com')\">" 
