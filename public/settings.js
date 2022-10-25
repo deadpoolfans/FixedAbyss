@@ -74,11 +74,21 @@ newpagetitle.onkeydown = function (event){
    } 
 }
 
-
+function openAB() {
+    var win = window.open()
+    var url = window.location.href
+    var iframe = win.document.createElement('iframe')
+    var body = document.getElementById('body')
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.src = url
+    win.document.body.style.margin = "0px";
+    win.document.body.appendChild(iframe)
+    }
+    
 
 // Themes in theme.js
-
-
 
 
 // Background
