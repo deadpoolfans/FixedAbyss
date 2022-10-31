@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <style>
-        body{
+        body {
             display: flex;
             flex-wrap: wrap;
             overflow-x: hidden;
@@ -20,8 +21,7 @@
         }
 
         ::-webkit-scrollbar:hover {
-            background: var(--scrollbar-bottom-btn) 0% calc(100% - 3px) / contain
-                    no-repeat,
+            background: var(--scrollbar-bottom-btn) 0% calc(100% - 3px) / contain no-repeat,
                 var(--scrollbar-top-btn) 0% calc(0% + 3px) / contain no-repeat,
                 var(--scroll);
         }
@@ -48,16 +48,17 @@
             src: local('Segoe UI Variable'), url('https://fonts.cdnfonts.com/s/63254/SegoeUIVF.woff') format('woff');
         }
 
-        @keyframes slide{
+        @keyframes slide {
             0% {
                 transform: translate3d(0, 0, 0);
             }
+
             100% {
                 transform: translate3d(-1692px, 0, 0);
             }
         }
-        
-        .background{
+
+        .background {
             background-image: url("stars.jpg");
             width: 15076px;
             height: 100%;
@@ -66,7 +67,7 @@
             animation: slide 55s linear infinite;
         }
 
-        .games{
+        .games {
             margin: 20px;
             border: 1.75px solid #4C4E52;
             flex: 1 1 320px;
@@ -75,7 +76,7 @@
             font-family: Segoe UI Variable, Segoe UI;
             color: white;
             z-index: 1000;
-            height: 150px;  
+            height: 150px;
         }
 
         .games>img {
@@ -85,7 +86,7 @@
     <title>Abyss</title>
     <link rel="icon" type="image/png" href="favicon.png" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1433621254584085"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -99,7 +100,8 @@
         <p>A Dark Room</p>
     </button>
     <button onclick="window.location.href = './games/asciispace'" class="games">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXEvcMikZKFnD13iW-9CEgx5BRwYUGcl_F1qwBJzXNIfBJWMKnzazE31gKSGDiFsT1-8A:https://i.ytimg.com/vi/J7zbt3XqfhE/maxresdefault.jpg&usqp=CAU" alt="ASCII Space">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXEvcMikZKFnD13iW-9CEgx5BRwYUGcl_F1qwBJzXNIfBJWMKnzazE31gKSGDiFsT1-8A:https://i.ytimg.com/vi/J7zbt3XqfhE/maxresdefault.jpg&usqp=CAU"
+            alt="ASCII Space">
         <p>ASCII Space</p>
     </button>
     <button onclick="window.location.href = './games/asteroids'" class="games">
@@ -118,8 +120,8 @@
         <img src="./games/blackholesquare/icon.png" alt="Black Hole Square">
         <p>Black Hole Square</p>
     </button>
-        <button onclick="window.location.href = './games/bounceback'" class="games">
-        <img src="./games/bounceback/screenshot.png"  alt="Bounce Back">
+    <button onclick="window.location.href = './games/bounceback'" class="games">
+        <img src="./games/bounceback/screenshot.png" alt="Bounce Back">
         <p>Bounce Back</p>
     </button>
     <button onclick="window.location.href = './games/breaklock'" class="games">
@@ -132,15 +134,18 @@
     </button>
     <button onclick="window.location.href = './games/btd4'" class="games">
         <img src="./games/thumbnails/bloons.png" alt="BTD 4">
-        <p>Bloons Tower Defense 4<p>
+        <p>Bloons Tower Defense 4
+        <p>
     </button>
     <button onclick="window.location.href = './games/captaincallisto'" class="games">
         <img src="./games/thumbnails/captaincallisto.png" alt="Captain Callisto">
-        <p>Captain Callisto<p>
+        <p>Captain Callisto
+        <p>
     </button>
     <button onclick="window.location.href = './games/chess'" class="games">
         <img src="./games/thumbnails/chess.png" alt="Chess">
-        <p>Chess<p>
+        <p>Chess
+        <p>
     </button>
     <button onclick="window.location.href = './games/chroma'" class="games">
         <img src="./games/thumbnails/chroma.jpg" alt="The Chroma Incident">
@@ -355,7 +360,8 @@
         <p>Tower Master</p>
     </button>
     <button onclick="window.location.href = './games/trimps'" class="games">
-        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1877960/ss_c652592d5a4d2cea8cbd1437f16a66f097929855.1920x1080.jpg?t=1651517965 ">
+        <img
+            src="https://cdn.akamai.steamstatic.com/steam/apps/1877960/ss_c652592d5a4d2cea8cbd1437f16a66f097929855.1920x1080.jpg?t=1651517965 ">
         <p>Trimps</p>
     </button>
     <button onclick="window.location.href = './games/underrrun'" class="games">
@@ -375,7 +381,8 @@
         <p>Vex 5</p>
     </button>
     <button onclick="window.location.href = './games/xx142-b2exe'" class="games">
-        <img src="https://images.crazygames.com/games/xx142-b2-exe/thumb-1571392772642.png?auto=format,compress&q=45&cs=strip&ch=DPR&w=1200&h=630&fit=crop">
+        <img
+            src="https://images.crazygames.com/games/xx142-b2-exe/thumb-1571392772642.png?auto=format,compress&q=45&cs=strip&ch=DPR&w=1200&h=630&fit=crop">
         <p>xx142-b2.exe</p>
     </button>
 
@@ -387,12 +394,13 @@
         window.addEventListener('load', (event) => {
             background.style.height = body.offsetHeight + "px"
         });
-        window.onresize = function(event) {
+        window.onresize = function (event) {
             background.style.height = body.offsetHeight + "px"
         };
     </script>
 
 </body>
+
 </html>
 <!--
         just need to use onclick:

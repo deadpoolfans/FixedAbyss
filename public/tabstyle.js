@@ -6,23 +6,23 @@ let verticaltabsbuttonimg = document.querySelector(".verticaltabsbuttonimg")
 let horizontaltabsbuttonimg = document.querySelector(".horizontaltabsbuttonimg")
 
 let tabStyle = getCookie("tabStyle")
-if(tabStyle == "vertical"){
+if (tabStyle == "vertical") {
     verticalTabs()
 }
-else if(tabStyle == "horizonimage.png"){
+else if (tabStyle == "horizonimage.png") {
     horizontalTabs()
 }
-else if(tabStyle == "floating"){
+else if (tabStyle == "floating") {
     floatingTabs()
 }
-else if(tabStyle == "gravity"){
+else if (tabStyle == "gravity") {
     gravityTabs()
 }
-else{
+else {
     horizontalTabs()
 }
 
-function horizontalTabs(){
+function horizontalTabs() {
     setCookie("tabStyle", "horizontal", "365");
 
     horizontaltabsbutton.forEach(elmnt => elmnt.style.display = "none");
@@ -53,7 +53,7 @@ function horizontalTabs(){
     let newtabandsettings = document.getElementsByClassName("newtabandsettings")[0]
     newtabandsettings.style.margin = ""
     newtabandsettings.style.marginBottom = ""
-    function fixHorizontalElements(){
+    function fixHorizontalElements() {
         tabstyle = "horizontal"
         let iframes = document.querySelectorAll(".iframe")
 
@@ -68,21 +68,21 @@ function horizontalTabs(){
 
     fixHorizontalElements();
 
-    var observer = new MutationObserver(function(mutations){
-        mutations.forEach(function(mutation){
-            if(tabstyle == "horizontal"){
-                for(var i = 0;i < mutation.addedNodes.length;i++){
-                        fixHorizontalElements();
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            if (tabstyle == "horizontal") {
+                for (var i = 0; i < mutation.addedNodes.length; i++) {
+                    fixHorizontalElements();
                 }
             }
         });
     });
-    observer.observe(tabsection, {childList: true, subtree: true});
-    observer.observe(document.querySelector("body"), {childList: true, subtree: true});
+    observer.observe(tabsection, { childList: true, subtree: true });
+    observer.observe(document.querySelector("body"), { childList: true, subtree: true });
 
 }
 
-function verticalTabs(){
+function verticalTabs() {
     horizontalTabs();
     setCookie("tabStyle", "vertical", "365");
 
@@ -114,7 +114,7 @@ function verticalTabs(){
     let newtabandsettings = document.getElementsByClassName("newtabandsettings")[0]
     newtabandsettings.style.margin = "0 auto"
     newtabandsettings.style.marginBottom = "5px"
-    function fixVerticalElements(){
+    function fixVerticalElements() {
         tabstyle = "vertical"
         let iframes = document.querySelectorAll(".iframe")
 
@@ -129,21 +129,21 @@ function verticalTabs(){
 
     fixVerticalElements();
 
-    var observer = new MutationObserver(function(mutations){
-        mutations.forEach(function(mutation){
-            if(tabstyle == "vertical"){
-                for(var i = 0;i < mutation.addedNodes.length;i++){
-                        fixVerticalElements();
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            if (tabstyle == "vertical") {
+                for (var i = 0; i < mutation.addedNodes.length; i++) {
+                    fixVerticalElements();
                 }
             }
         });
     });
-    observer.observe(tabsection, {childList: true, subtree: true});
-    observer.observe(document.querySelector("body"), {childList: true, subtree: true});
+    observer.observe(tabsection, { childList: true, subtree: true });
+    observer.observe(document.querySelector("body"), { childList: true, subtree: true });
 
 }
 
-function floatingTabs(){
+function floatingTabs() {
     horizontalTabs();
     setCookie("tabStyle", "floating", "365")
 
@@ -165,7 +165,7 @@ function floatingTabs(){
 
     let newtabandsettings = document.getElementsByClassName("newtabandsettings")[0]
 
-    function fixFloatingElements(){
+    function fixFloatingElements() {
         tabstyle = "floating"
         var newwidth = 0
         document.querySelectorAll(".tab").forEach(elmnt => {
@@ -186,50 +186,50 @@ function floatingTabs(){
     }
 
     fixFloatingElements();
-    
-    var observer = new MutationObserver(function(mutations){
-        mutations.forEach(function(mutation){
-            if(tabstyle == "floating"){
-                    fixFloatingElements();
+
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            if (tabstyle == "floating") {
+                fixFloatingElements();
             }
         });
     });
-    observer.observe(tabsection, {childList: true, subtree: true});
+    observer.observe(tabsection, { childList: true, subtree: true });
 
     //Enabling
 
-    function closeFloatingTabs(){
+    function closeFloatingTabs() {
         topbar.style.top = "-150px"
         closeMenu();
     }
 
-    onmousemove = function(e){
-        if(e.clientY < 10){
+    onmousemove = function (e) {
+        if (e.clientY < 10) {
             topbar.style.top = "95px"
         }
-        topbar.onmouseleave = function(e){
+        topbar.onmouseleave = function (e) {
 
-             if(e.clientY < 35){
+            if (e.clientY < 35) {
                 return;
             }
             //if(moremenu.style.display == "block" && e.clientX > moremenu.getBoundingClientRect().x && e.clientX < moremenu.getBoundingClientRect().x + 101){
-            if(moremenu.style.display == "block"){
+            if (moremenu.style.display == "block") {
                 return;
             }
-            else{
+            else {
                 closeFloatingTabs();
             }
         }
-        if(moremenu.style.display == "block"){
+        if (moremenu.style.display == "block") {
             return;
         }
-        else if(e.clientX < topbar.getBoundingClientRect().x){
+        else if (e.clientX < topbar.getBoundingClientRect().x) {
             closeFloatingTabs();
         }
-        else if(e.clientX > topbar.getBoundingClientRect().x+ topbar.offsetWidth){
+        else if (e.clientX > topbar.getBoundingClientRect().x + topbar.offsetWidth) {
             closeFloatingTabs();
         }
-        else if(e.clientY > 155){
+        else if (e.clientY > 155) {
             closeFloatingTabs();
         }
         // else{
@@ -240,7 +240,7 @@ function floatingTabs(){
 
 }
 
-function gravityTabs(){
+function gravityTabs() {
     horizontalTabs();
     setCookie("tabStyle", "gravity", "365")
 
@@ -263,7 +263,7 @@ function gravityTabs(){
     tabsandmore.style.width = "calc(100% - 30px)"
     tabsandmore.style.minWidth = "0"
     tabsandmore.style.backdropFilter = "saturate(3) blur(20px)"
-    
+
     body.appendChild(urlbartop)
     urlbartop.style.position = "absolute"
     urlbartop.style.bottom = "15px"
@@ -274,7 +274,7 @@ function gravityTabs(){
     urlbartop.style.backdropFilter = "saturate(3) blur(20px)"
     var urlbarInner = urlbartop.innerHTML;
     //var newgamesforurlbar = "<img class=\"invert\"src=\"discord.png\" width=\"35px\" height=\"35px\" onclick=\"go('discord.com')\"> <img class=\"invert\"src=\"roblox.png\" width=\"35px\" height=\"35px\" onclick=\"go('https://v3.now.gg/play/5349')\"> <img class=\"invert\"src=\"games.png\" width=\"35px\" height=\"35px\" onclick=\"window.open('./games.html', '_blank')\"> <img class=\"invert\"src=\"geforce.png\" width=\"35px\" height=\"35px\" onclick=\"go('play.geforcenow.com')\">" 
-    urlbartop.insertBefore(pageimagelinks,searchbar)
+    urlbartop.insertBefore(pageimagelinks, searchbar)
     urlbarhomepage.remove();
 
     pageimagelinks.style.marginBottom = "5px"
@@ -282,11 +282,11 @@ function gravityTabs(){
     let pageimagelinkdivs = document.querySelectorAll("#pageimagelinks div");
     let pageimagelinkimages = document.querySelectorAll("#pageimagelinks img");
     pageimagelinkdivs.forEach(elmnt => {
-        elmnt.style.width =  "25px"
+        elmnt.style.width = "25px"
         elmnt.style.height = "25px"
     })
     pageimagelinkimages.forEach(elmnt => {
-        elmnt.style.width =  "25px"
+        elmnt.style.width = "25px"
         elmnt.style.height = "25px"
     })
     openinnewtab.style.marginRight = "4px";
@@ -294,7 +294,7 @@ function gravityTabs(){
     //pageimagelinks.remove();
     header.style.fontSize = "75px";
 
-    function fixGravityTabs(){
+    function fixGravityTabs() {
         tabstyle = "gravity"
 
         let tabs = document.querySelectorAll(".tab")
@@ -310,14 +310,14 @@ function gravityTabs(){
     }
 
     fixGravityTabs();
-    
-    var observer = new MutationObserver(function(mutations){
-        mutations.forEach(function(mutation){
-            if(tabstyle == "gravity"){
+
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            if (tabstyle == "gravity") {
                 fixGravityTabs();
             }
         });
     });
-    observer.observe(tabsection, {childList: true, subtree: true});
+    observer.observe(tabsection, { childList: true, subtree: true });
 
-    }
+}

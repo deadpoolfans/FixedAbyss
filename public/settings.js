@@ -4,13 +4,13 @@ let settingsbackground = document.getElementById("settingsbackground")
 let settings = document.getElementById("settings")
 let settingsbutton = document.getElementById("settingsbutton")
 
-settingsbutton.addEventListener("click", ()=>{
+settingsbutton.addEventListener("click", () => {
     moremenu.style.display = "none"
     settingsbackground.style.display = "flex"
 })
 
-window.addEventListener('mouseup', function(e) {
-    if (event.target.closest("#settingsbackground") && !event.target.closest("#settings")){
+window.addEventListener('mouseup', function (e) {
+    if (event.target.closest("#settingsbackground") && !event.target.closest("#settings")) {
         settingsbackground.style.display = "none";
     }
 });
@@ -34,44 +34,44 @@ let newpageicon = document.getElementById("newpageicon")
 let newpagetitle = document.getElementById("newpagetitle")
 
 let pageIcon = getCookie("pageIcon")
-if(pageIcon !== ""){
+if (pageIcon !== "") {
     changePageIcon(pageIcon)
 }
-else{
+else {
     void 0;
 }
 
 let pageTitle = getCookie("pageTitle")
-if(pageTitle !== ""){
+if (pageTitle !== "") {
     changePageTitle(pageTitle)
 }
-else{
+else {
     void 0;
 }
 
-function changePageIcon(iconurl){
+function changePageIcon(iconurl) {
     var pageicon = document.querySelector("link[rel~='icon']");
     setCookie("pageIcon", iconurl, "365");
     pageicon.href = iconurl
     newpageicon.value = iconurl
 }
 
-function changePageTitle(newtitle){
+function changePageTitle(newtitle) {
     setCookie("pageTitle", newtitle, "365");
     document.title = newtitle
     newpagetitle.value = newtitle
 }
 
-newpageicon.onkeydown = function (event){
-     if (event.key === 'Enter'){
+newpageicon.onkeydown = function (event) {
+    if (event.key === 'Enter') {
         changePageIcon(newpageicon.value);
-    } 
+    }
 }
 
-newpagetitle.onkeydown = function (event){
-    if (event.key === 'Enter'){
-       changePageTitle(newpagetitle.value);
-   } 
+newpagetitle.onkeydown = function (event) {
+    if (event.key === 'Enter') {
+        changePageTitle(newpagetitle.value);
+    }
 }
 
 function openAB() {
@@ -85,8 +85,8 @@ function openAB() {
     iframe.src = url
     win.document.body.style.margin = "0px";
     win.document.body.appendChild(iframe)
-    }
-    
+}
+
 
 // Themes in theme.js
 
@@ -96,21 +96,21 @@ function openAB() {
 let homepageimage = document.getElementById("homepageimage")
 
 let backgroundImage = getCookie("backgroundImage")
-if(backgroundImage !== ""){
+if (backgroundImage !== "") {
     changeBackground(backgroundImage)
 }
-else{
+else {
     void 0;
 }
 
-function changeBackground(backgroundurl){
+function changeBackground(backgroundurl) {
     setCookie("backgroundImage", backgroundurl, "365")
-    if(backgroundurl == "stars.jpg"){
+    if (backgroundurl == "stars.jpg") {
         homepageimage.style.width = "5076px"
         homepageimage.style.animation = "slide 55s linear infinite"
         homepageimage.style.backgroundPosition = "initial"
     }
-    else{
+    else {
         homepageimage.style.width = "100%"
         homepageimage.style.animation = "none"
         homepageimage.style.backgroundPosition = "50%"

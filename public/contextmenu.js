@@ -1,13 +1,13 @@
 document.oncontextmenu = rightClick;
 
-function rightClick(e){
-    e.preventDefault();
+function rightClick(e) {
+	e.preventDefault();
 }
 
 let morebutton = document.getElementById("morebutton")
 let moremenu = document.getElementById("moremenu")
 
-function openMenu(){
+function openMenu() {
 	var moremenurect = morebutton.getBoundingClientRect();
 	moremenu.style.top = moremenurect.y + 30 + "px"
 	moremenu.style.left = moremenurect.x + 15 - 50 + "px"
@@ -19,21 +19,21 @@ function openMenu(){
 	})
 }
 
-function closeMenu(){
+function closeMenu() {
 	moremenu.style.display = "none"
-	
+
 	let iframes = document.querySelectorAll(".iframe")
 	iframes.forEach(elmnt => {
 		elmnt.style.pointerEvents = "all"
 	})
 }
 
-morebutton.addEventListener("click", ()=>{
+morebutton.addEventListener("click", () => {
 
-	if(moremenu.style.display == "block"){
+	if (moremenu.style.display == "block") {
 		closeMenu();
 	}
-	else{
+	else {
 
 		openMenu();
 
@@ -53,10 +53,10 @@ morebutton.addEventListener("click", ()=>{
 	}
 })
 
-window.addEventListener('mouseup', function(e) {
-    if (!event.target.closest("#moremenu") && !event.target.closest("#morebutton")){
-        moremenu.style.display = "none";
-    }
+window.addEventListener('mouseup', function (e) {
+	if (!event.target.closest("#moremenu") && !event.target.closest("#morebutton")) {
+		moremenu.style.display = "none";
+	}
 });
 
 var screen = document.documentElement;
@@ -70,14 +70,14 @@ function openFullscreen() {
 	exitfullscreenbutton.forEach(elmnt => elmnt.style.display = "block");
 	exitfullscreenbuttonimg.style.display = "inline-flex"
 	if (screen.requestFullscreen) {
-	  screen.requestFullscreen();
+		screen.requestFullscreen();
 	} else if (screen.webkitRequestFullscreen) { /* Safari */
-	  screen.webkitRequestFullscreen();
+		screen.webkitRequestFullscreen();
 	} else if (screen.msRequestFullscreen) { /* IE11 */
-	  screen.msRequestFullscreen();
+		screen.msRequestFullscreen();
 	}
 }
-  
+
 function closeFullscreen() {
 	exitfullscreenbutton.forEach(elmnt => elmnt.style.display = "none");
 	fullscreenbutton.forEach(elmnt => elmnt.style.display = "block");

@@ -7,11 +7,11 @@ let urlbartop = document.querySelector('#searchbar');
 form.forEach(item => {
   item.addEventListener("submit", async (event) => {
     event.preventDefault();
-    
+
   });
 })
 
-function go(value){
+function go(value) {
   let iframe = document.querySelector(".iframe.active");
   window.navigator.serviceWorker
     .register("./sw.js", {
@@ -38,15 +38,15 @@ async function getIframeFavicon(value) {
 
 }
 
-urlbarhomepage.onkeydown = function (event){
-  if (event.key === 'Enter'){
+urlbarhomepage.onkeydown = function (event) {
+  if (event.key === 'Enter') {
     event.preventDefault
     go(urlbarhomepage.value.replace("http://", "https://"));
-  } 
+  }
 }
 
-urlbartop.onkeydown = function (event){
-  if (event.key === 'Enter'){
+urlbartop.onkeydown = function (event) {
+  if (event.key === 'Enter') {
     event.preventDefault
     go(urlbartop.value.replace("http://", "https://"));
   }

@@ -1,13 +1,13 @@
-:root{
+:root {
     --element-background: #343434cc;
     --background-color: #2a2a2acc;
     --font-color: white;
-    --border: 1.75px solid #4C4E52;
+    --border: 1.75px solid #4c4e52;
     --tab-active-background: #444444cc;
     --invert: 1;
 }
 
-html{
+html {
     height: 100%;
     background-position: 50%;
     background-repeat: no-repeat;
@@ -17,9 +17,9 @@ html{
     overflow: hidden;
 }
 
-body{
+body {
     display: table;
-    background-color: rgb(0,0,0);
+    background-color: rgb(0, 0, 0);
     height: 100%;
     width: 100%;
     margin: 0;
@@ -28,22 +28,23 @@ body{
 }
 
 @font-face {
-    font-family: 'Segoe UI Variable';
+    font-family: "Segoe UI Variable";
     font-style: normal;
     font-weight: 400;
-    src: local('Segoe UI Variable'), url('https://fonts.cdnfonts.com/s/63254/SegoeUIVF.woff') format('woff');
+    src: local("Segoe UI Variable"),
+        url("https://fonts.cdnfonts.com/s/63254/SegoeUIVF.woff") format("woff");
 }
 
 @font-face {
-    font-family: 'Aloja';
-    src: url('aloja-light.woff') format('woff');
+    font-family: "Aloja";
+    src: url("aloja-light.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
-*{
+* {
     font-family: Segoe UI Variable, Segoe UI;
-    transition: all .2s;
+    transition: all 0.2s;
 }
 
 ::-webkit-scrollbar {
@@ -56,8 +57,7 @@ body{
 }
 
 ::-webkit-scrollbar:hover {
-    background: var(--scrollbar-bottom-btn) 0% calc(100% - 3px) / contain
-            no-repeat,
+    background: var(--scrollbar-bottom-btn) 0% calc(100% - 3px) / contain no-repeat,
         var(--scrollbar-top-btn) 0% calc(0% + 3px) / contain no-repeat,
         var(--scroll);
 }
@@ -79,7 +79,7 @@ body{
 
 tooltip {
     opacity: 0;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     position: fixed;
     background: var(--background-color);
     color: var(--font-color);
@@ -91,11 +91,11 @@ tooltip {
     backdrop-filter: saturate(3) blur(20px);
 }
 
-.invert{
+.invert {
     filter: invert(var(--invert));
 }
 
-.topbar{
+.topbar {
     background: var(--background-color);
     box-sizing: border-box;
     padding: 5px;
@@ -103,12 +103,12 @@ tooltip {
     backdrop-filter: saturate(3) blur(20px);
     -webkit-backdrop-filter: saturate(3) blur(20px);
     min-width: fit-content;
-    transition: all .17s cubic-bezier(.79,.14,.15,.86);
+    transition: all 0.17s cubic-bezier(0.79, 0.14, 0.15, 0.86);
     z-index: 100;
     position: relative;
 }
 
-.tabsandmore{
+.tabsandmore {
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -117,12 +117,12 @@ tooltip {
     z-index: 100;
 }
 
-.newtabandsettings{
+.newtabandsettings {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    background: #1F1F1F;
+    background: #1f1f1f;
     width: fit-content;
     margin: 5px;
     box-sizing: border-box;
@@ -130,7 +130,7 @@ tooltip {
     height: 35px;
 }
 
-.newtabandsettings img{
+.newtabandsettings img {
     padding: 2.5px;
     box-sizing: border-box;
     width: 30px;
@@ -139,14 +139,14 @@ tooltip {
     border-radius: 10px;
 }
 
-.tabsection{
+.tabsection {
     height: 45px;
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-#moremenu{
+#moremenu {
     display: none;
     position: absolute;
     width: 100px;
@@ -163,44 +163,45 @@ tooltip {
     backdrop-filter: saturate(3) blur(20px);
 }
 
-#moremenu p{
+#moremenu p {
     font-size: 13px;
     margin: 7.5px 0px;
 }
 
-#moremenu img{
+#moremenu img {
     width: 30px;
 }
 
-#lightanddarkmodebuttons{
+#lightanddarkmodebuttons {
     display: flex;
     justify-content: center;
 }
 
-#lightanddarkmodebuttons div{
+#lightanddarkmodebuttons div {
     width: 20px;
     height: 20px;
     border-radius: 20px;
     margin: 0px 5px;
 }
 
-#lightmodebutton{
+#lightmodebutton {
     background: #d9d9d9;
 }
 
-#darkmodebutton{
+#darkmodebutton {
     background: #202020;
 }
 
-.exitfullscreenbutton{
+.exitfullscreenbutton {
     display: none;
 }
 
-.horizontaltabsbutton{
+.horizontaltabsbutton {
     display: none;
 }
 
-.tab , .settingstab{
+.tab,
+.settingstab {
     cursor: default;
     display: flex;
     align-items: center;
@@ -215,7 +216,7 @@ tooltip {
     margin: 5px;
 }
 
-.tab{
+.tab {
     width: 0px;
     max-width: 125px;
     overflow: hidden;
@@ -225,29 +226,31 @@ tooltip {
     padding: 0px;
 }
 
-.tabfavicon{
+.tabfavicon {
     width: 17.5px;
     margin-right: 5px;
     border-radius: 17.5px;
     margin-left: 10px;
 }
 
-.tab p , .settingstab p{
+.tab p,
+.settingstab p {
     margin: 0px;
     justify-self: baseline;
 }
 
-.tabclose{
+.tabclose {
     margin-left: auto;
     width: 10px;
     margin-right: 10px;
 }
 
-.tab.active , .settingstab.active{
+.tab.active,
+.settingstab.active {
     background: var(--tab-active-background) !important;
 }
 
-#urlbartop{
+#urlbartop {
     width: calc(100% - 5px);
     height: 35px;
     box-sizing: border-box;
@@ -257,7 +260,7 @@ tooltip {
     z-index: 10;
 }
 
-#urlbartop input{
+#urlbartop input {
     margin: 0px 5px;
     width: -webkit-fill-available;
     height: 100%;
@@ -272,20 +275,20 @@ tooltip {
     -webkit-backdrop-filter: saturate(3) blur(20px);
 }
 
-#urlbartop div{
+#urlbartop div {
     display: flex;
 }
 
-#urlbartop div svg{
+#urlbartop div svg {
     width: 25px;
 }
 
-#urlbartop div svg path{
+#urlbartop div svg path {
     fill: #5f6368;
     stroke: #5f6368;
 }
 
-#homepage{
+#homepage {
     overflow: hidden;
     text-align: center;
     background-color: #000410;
@@ -309,10 +312,11 @@ tooltip {
     z-index: 0;
 }
 
-@keyframes slide{
+@keyframes slide {
     0% {
         transform: translate3d(0, 0, 0);
     }
+
     100% {
         transform: translate3d(-1692px, 0, 0);
     }
@@ -323,7 +327,7 @@ tooltip {
     margin-top: 5px;
 }
 
-#homepage *{
+#homepage * {
     z-index: 5;
     color: white;
 }
@@ -338,13 +342,13 @@ tooltip {
     background-size: cover;
 }
 
-header{
+header {
     font-family: Segoe UI Variable, Segoe UI;
     font-size: 50px;
     margin: 10px 0px;
 }
 
-#urlbarhomepage{
+#urlbarhomepage {
     width: 300px;
     height: 50px;
     box-sizing: border-box;
@@ -352,7 +356,7 @@ header{
     margin: 0px 5px;
 }
 
-#urlbarhomepage input{
+#urlbarhomepage input {
     padding: 0;
     width: 100%;
     height: 100%;
@@ -366,14 +370,14 @@ header{
     backdrop-filter: saturate(3) blur(20px);
 }
 
-#pageimagelinks{
+#pageimagelinks {
     margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#pageimagelinks div{
+#pageimagelinks div {
     border-radius: 10px;
     margin: 0px 5px;
     cursor: pointer;
@@ -387,27 +391,27 @@ header{
     backdrop-filter: saturate(3) blur(20px);
 }
 
-#pageimagelinks img{
+#pageimagelinks img {
     height: 40px;
 }
 
-#homepagelinks{
+#homepagelinks {
     position: absolute;
     bottom: 10px;
     right: 10px;
 }
 
-#homepagelinks p{
+#homepagelinks p {
     text-decoration: underline;
     margin: 0;
     font-size: 14.5px;
 }
 
-#homepagelinks p:hover{
+#homepagelinks p:hover {
     cursor: pointer;
 }
 
-.iframe{
+.iframe {
     background: var(--background-color);
     width: calc(100% - 20px);
     height: calc(100% - 110px);
@@ -421,8 +425,8 @@ header{
     backdrop-filter: saturate(3) blur(20px);
 }
 
-#settingsbackground{
-    background-color: rgba(247,247,247, 0.15);
+#settingsbackground {
+    background-color: rgba(247, 247, 247, 0.15);
     backdrop-filter: saturate(3) blur(10px);
     -webkit-backdrop-filter: saturate(3) blur(10px);
     position: absolute;
@@ -436,7 +440,7 @@ header{
     align-items: center;
 }
 
-#settings{
+#settings {
     width: 70%;
     height: 70%;
     overflow: hidden;
@@ -449,38 +453,38 @@ header{
     backdrop-filter: saturate(3) blur(20px);
 }
 
-#settings *{
+#settings * {
     color: var(--font-color);
 }
 
-#settingssidebar{
-    background-color: #1F1F1F;
+#settingssidebar {
+    background-color: #1f1f1f;
     height: 100%;
     width: 100px;
 }
 
-#settingssidebar h4{
+#settingssidebar h4 {
     margin: 10px;
     text-align: center;
 }
 
-.settingstab img{
+.settingstab img {
     margin-left: 25px;
 }
 
-.settingstab p{
+.settingstab p {
     font-size: 13px;
 }
 
-.settingssection h1{
+.settingssection h1 {
     margin: 0;
 }
 
-.taboptions p{
+.taboptions p {
     margin: 0;
 }
 
-.settingssection{
+.settingssection {
     width: 100%;
     height: 100%;
     display: none;
@@ -518,7 +522,9 @@ header{
     border: var(--border);
 }
 
-#themeoptions , #backgroundoptions, .taboptions{
+#themeoptions,
+#backgroundoptions,
+.taboptions {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -526,26 +532,34 @@ header{
     height: fit-content;
 }
 
-.themeoption , .backgroundoption, .taboption{
+.themeoption,
+.backgroundoption,
+.taboption {
     margin: 10px;
 }
 
-.themeoption img , .backgroundoption img, .taboption img, #lighttheme , #darktheme{
+.themeoption img,
+.backgroundoption img,
+.taboption img,
+#lighttheme,
+#darktheme {
     width: 200px;
     border-radius: 10px;
     height: 125px;
 }
 
-.themeoption p , .backgroundoption p, .taboption p{
+.themeoption p,
+.backgroundoption p,
+.taboption p {
     font-size: 13px;
     text-align: center;
     margin: 0;
 }
 
-#lighttheme{
+#lighttheme {
     background: #d9d9d9;
 }
 
-#darktheme{
+#darktheme {
     background: #202020;
 }

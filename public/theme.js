@@ -3,17 +3,17 @@
 let root = document.querySelector(":root")
 
 let colorTheme = getCookie("colorTheme")
-if(colorTheme == "light"){
+if (colorTheme == "light") {
     lightMode()
 }
-else if(colorTheme == "dark"){
+else if (colorTheme == "dark") {
     darkMode()
 }
-else{
+else {
     darkMode()
 }
 
-function darkMode(){
+function darkMode() {
     setCookie("colorTheme", "dark", "365");
 
     root.style.setProperty("--element-background", "");
@@ -31,7 +31,7 @@ function darkMode(){
     document.querySelector("#settingssidebar").style.background = "";
 }
 
-function lightMode(){
+function lightMode() {
     setCookie("colorTheme", "light", "365");
 
     root.style.setProperty("--element-background", "#DFDFDFcc");
