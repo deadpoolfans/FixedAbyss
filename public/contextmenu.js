@@ -55,7 +55,7 @@ morebutton.addEventListener("click", () => {
 
 window.addEventListener('mouseup', function (e) {
 	if (!event.target.closest("#moremenu") && !event.target.closest("#morebutton")) {
-		moremenu.style.display = "none";
+		closeMenu();
 	}
 });
 
