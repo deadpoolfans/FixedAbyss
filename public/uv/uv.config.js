@@ -1,5 +1,5 @@
 self.__uv$config = {
-    prefix: '/service/',
+    prefix: '/about/',
     bare: '/bare/',
     encodeUrl: Ultraviolet.codec.plain.encode,
     decodeUrl: Ultraviolet.codec.plain.decode,
