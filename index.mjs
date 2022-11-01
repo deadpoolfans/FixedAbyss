@@ -6,7 +6,7 @@ import os from 'os';
 const numCPUs = os.cpus().length;
 import fs from 'fs';
 let blockList = 0
-fs.readFile("./blocked.txt" function(err, data) {
+fs.readFile("./blocked.txt", function(err, data) {
 blockList = data
 });
 if(cluster.isMaster){
@@ -23,7 +23,7 @@ const server = http.createServer();
 server.on('request', (request, response) => {
 	
     if (bare.route_request(request, response)) {
-    if blockList.includes(request.rawHeaders[request.rawHeaders.indexOf('x-bare-host')+1]){
+    if (blockList.includes(request.rawHeaders[request.rawHeaders.indexOf('x-bare-host')+1])) {
     return false;
     }else{
 	    return true;
