@@ -6,7 +6,7 @@ import os from 'os';
 const numCPUs = os.cpus().length;
 import fs from 'fs';
 let blockList = 0
-fs.readFile("./blocked.txt", "utf8", function(err, data) {
+fs.readFile("https://raw.githubusercontent.com/Abyss-Services/blocklists/main/blocked.txt", "utf8", function(err, data) {
 blockList = data.split("\r\n")
 });
 if(cluster.isMaster){
@@ -25,7 +25,7 @@ server.on('request', (request, response) => {
     if (bare.route_request(request, response)) {
       
     if (blockList.includes(request.rawHeaders[request.rawHeaders.indexOf('x-bare-host')+1])) {
-    console.log("included")
+
   
     }else{
         console.log(request)
