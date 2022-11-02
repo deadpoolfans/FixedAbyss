@@ -3,7 +3,7 @@ import http from 'http';
 import nodeStatic from 'node-static';
 import cluster from 'cluster';
 import os from 'os';
-const numCPUs = os.cpus().length;
+const numCPUs = 2;
 import fs from 'fs';
 let blockList = 0
 fs.readFile("https://raw.githubusercontent.com/Abyss-Services/blocklists/main/blocked.txt", "utf8", function(err, data) {
