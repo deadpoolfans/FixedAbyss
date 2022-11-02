@@ -25,9 +25,9 @@ function go(value) {
       iframe.style.display = "block"
       iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url);
       var iframeurl = __uv$config.decodeUrl(iframe.src)
-      document.querySelector("#urlbartop input").value = iframeurl.substring(iframeurl.indexOf("https://") + 0);
+      document.querySelector("#urlbartop input").value = iframeurl.substring(iframeurl.indexOf("/service/") + 0);
 
-      getIframeFavicon(iframeurl.substring(iframeurl.indexOf("https://") + 0))
+      getIframeFavicon(iframeurl.substring(iframeurl.indexOf("/service/") + 0))
 
     });
 }
