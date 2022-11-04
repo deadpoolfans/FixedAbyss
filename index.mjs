@@ -4,11 +4,6 @@ import nodeStatic from 'node-static';
 import cluster from 'cluster';
 import os from 'os';
 const numCPUs = os.cpus().length;
-import fs from 'fs';
-let blockList = 0
-fs.readFile("https://raw.githubusercontent.com/Abyss-Services/blocklists/main/blocked.txt", "utf8", function(err, data) {
-blockList = data.split("\r\n")
-});
 if(cluster.isMaster){
 console.log("Running");
 	for(let i = 0; i < numCPUs; i++){
@@ -19,24 +14,10 @@ const bare =  new Server('/bare/', '');
 const serve = new nodeStatic.Server('public/');
 
 const server = http.createServer();
-
 server.on('request', (request, response) => {
-	
-    if (bare.route_request(request, response)) {
-      
-    if (blockList.includes(request.rawHeaders[request.rawHeaders.indexOf('x-bare-host')+1])) {
-
-  
-    }else{
-        console.log(request)
-	    return true;
-    }
-    }
+    if (bare.route_request(request, response)) return true;
     serve.serve(request, response);
-   
-    
 });
-
 server.on('upgrade', (req, socket, head) => {
 	if(bare.route_upgrade(req, socket, head))return;
 	socket.end();
