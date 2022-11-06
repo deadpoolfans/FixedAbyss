@@ -15,7 +15,10 @@ const serve = new nodeStatic.Server('public/');
 
 const server = http.createServer();
 server.on('request', (request, response) => {
-    if (bare.route_request(request, response)) return true;
+	
+    if (bare.route_request(request, response)){ 
+		//console.log(request.rawHeaders[request.rawHeaders.indexOf('userKey')+1])
+		return true;}
     serve.serve(request, response);
 });
 server.on('upgrade', (req, socket, head) => {

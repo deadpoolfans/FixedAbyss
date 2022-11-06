@@ -4,6 +4,8 @@ let iframe = document.getElementById("iframe");
 let urlbarhomepage = document.querySelector('#urlbarhomepage input');
 let urlbartop = document.querySelector('#searchbar');
 
+let userKey = new URLSearchParams(window.location.search).get("userKey")
+
 form.forEach(item => {
   item.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -14,7 +16,7 @@ form.forEach(item => {
 function go(value) {
   let iframe = document.querySelector(".iframe.active");
   window.navigator.serviceWorker
-    .register("./sw.js", {
+    .register("./sw.js?userkey=" + userKey, {
       scope: __uv$config.prefix,
     })
     .then(() => {
@@ -24,11 +26,13 @@ function go(value) {
         url = "https://" + url;
       iframe.style.display = "block"
       iframe.src = __uv$config.prefix + __uv$config.encodeUrl(url);
-      var iframeurl = __uv$config.decodeUrl(iframe.src)
-      document.querySelector("#urlbartop input").value = iframeurl.substring(iframeurl.indexOf("/service/") + 0);
+      //var iframeurl = __uv$config.decodeUrl(iframe.src)
+      var iframeurl = iframe.src.substring(iframe.src.indexOf("/service/") + 9);
+      //document.querySelector("#urlbartop input").value = iframeurl.substring(iframeurl.indexOf("/service/") + 0);
+      document.querySelector("#urlbartop input").value = __uv$config.decodeUrl(iframeurl)
 
-      getIframeFavicon(iframeurl.substring(iframeurl.indexOf("/service/") + 0))
-
+      //getIframeFavicon(iframeurl.substring(iframeurl.indexOf("/service/") + 0))
+      getIframeFavicon(__uv$config.decodeUrl(iframeurl))
     });
 }
 
