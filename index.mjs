@@ -3,7 +3,7 @@ import http from 'http';
 import nodeStatic from 'node-static';
 import cluster from 'cluster';
 import os from 'os';
-const numCPUs = os.cpus().length;
+const numCPUs = 6;
 if(cluster.isMaster){
 console.log("Running");
 	for(let i = 0; i < numCPUs; i++){
