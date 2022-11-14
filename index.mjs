@@ -3,7 +3,9 @@ import http from 'http';
 import nodeStatic from 'node-static';
 import cluster from 'cluster';
 import os from 'os';
-const numCPUs = 6;
+import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config()
+const numCPUs = process.env.MAXCPUS;
 if(cluster.isMaster){
 console.log("Running");
 	for(let i = 0; i < numCPUs; i++){
